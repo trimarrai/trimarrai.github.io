@@ -14,9 +14,25 @@ button,input,select,textarea{font:inherit;font-size:16px;color:inherit}
 header{display:flex;align-items:center;gap:10px;padding:6px 4px 12px}
 header h1{flex:1;margin:0;font-size:19px}
 header small{display:block;font-size:12px;font-weight:400;color:var(--sub)}
-.tabs{position:sticky;top:0;z-index:5;display:flex;gap:4px;margin:0 0 12px;padding:4px;background:#eef1fb;border-radius:12px}
-.tabs button{flex:1;height:40px;border:0;border-radius:9px;background:none;color:var(--sub);font-size:14px;font-weight:600}
-.tabs button.on{background:#FFF;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.tabs{position:sticky;top:0;z-index:5;display:grid;grid-template-columns:repeat(6,1fr);margin:0 -12px 12px;background:#FFF;border-bottom:1px solid var(--line)}
+.tabs button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 0 8px;border:0;border-bottom:3px solid transparent;background:none;color:var(--sub);font-size:12px;font-weight:600}
+.tabs button.on{color:var(--pri);border-bottom-color:var(--pri)}
+.tabs svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.hit{padding:12px 0;border-top:1px solid var(--line)}
+.hit:first-of-type{border-top:0;padding-top:0}
+.hit p{margin:0}
+.hit .top{display:flex;justify-content:space-between;font-size:13px;color:var(--sub)}
+.hit .ch{margin:4px 0 2px;font-weight:600}
+.hit .lp{font-size:13px;color:var(--sub)}
+.hit .env{font-size:12px;color:#7a8092}
+.bars{margin:0;padding:0;list-style:none}
+.bars li{display:grid;grid-template-columns:1fr 48px 44px;align-items:center;gap:6px;margin:6px 0}
+.bars .lbl{position:relative;min-width:0;padding:6px 10px;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bars .lbl i{position:absolute;left:0;top:0;bottom:0;background:#EDE9FE;border-radius:8px}
+.bars .lbl span{position:relative}
+.bars b{text-align:right;font-variant-numeric:tabular-nums}
+.bars em{text-align:right;font-style:normal;color:var(--sub);font-size:13px}
+.unit{margin:6px 0 0;text-align:right;font-size:12px;color:var(--mute)}
 .card{background:var(--card);border-radius:14px;padding:16px;margin-bottom:12px}
 h2{margin:0 0 12px;font-size:17px}
 h2 small{margin-left:6px;font-size:12px;font-weight:400;color:var(--sub)}

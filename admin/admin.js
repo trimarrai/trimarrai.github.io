@@ -2,7 +2,7 @@
 // 앱과 같은 Firebase 프로젝트(leelmell-1a2ab)를 씁니다. 실제로 막아 주는 것은 Firestore 규칙(관리자 계정만 읽기·쓰기)입니다.
 // 주소 끝에 ?demo 를 붙이면 Firebase 없이 예시 데이터로 화면만 봅니다.
 
-const V = '13.3.0'
+// Firebase 13.3.0 (앱과 같은 버전) 파일을 fb/ 에 함께 둡니다
 const CONFIG = {
   apiKey: 'AIzaSyCpAGVQkmkG1UDRN2xMO4-Z0YeTnwObfo8',
   authDomain: 'leelmell-1a2ab.firebaseapp.com',
@@ -51,9 +51,9 @@ let picked = null // 사용자 탭에서 보고 있는 사용자
 
 async function loadFirebase() {
   const [app, auth, fs] = await Promise.all([
-    import(`https://www.gstatic.com/firebasejs/${V}/firebase-app.js`),
-    import(`https://www.gstatic.com/firebasejs/${V}/firebase-auth.js`),
-    import(`https://www.gstatic.com/firebasejs/${V}/firebase-firestore-lite.js`),
+    import('./fb/firebase-app.js'),
+    import('./fb/firebase-auth.js'),
+    import('./fb/firebase-firestore-lite.js'),
   ])
   const a = app.initializeApp(CONFIG)
   return { auth: auth.getAuth(a), db: fs.getFirestore(a), A: auth, F: fs }

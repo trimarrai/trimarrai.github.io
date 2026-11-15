@@ -1,47 +1,74 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>외계문어 릴멜의 타로카드</title>
-<meta name="description" content="신비한 능력을 지닌 외계문어 릴멜이 매일 3장의 타로카드로 과거 · 현재 · 미래를 보여줍니다. 율리움의 연애운 타로까지.">
+<meta name="description" content="30억 광년 떨어진 아리미오니오니별에서 불시착한 외계문어 릴멜이 매일 3장의 타로카드로 과거 · 현재 · 미래를 보여줍니다. 율리움의 연애운 타로까지.">
 <meta property="og:title" content="외계문어 릴멜의 타로카드">
 <meta property="og:description" content="매일 3장의 카드로 과거 · 현재 · 미래를 보여주는 릴멜의 타로">
 <meta property="og:image" content="https://trimarrai.github.io/images/mm01.png">
-<meta name="theme-color" content="#E88BCF">
+<meta name="theme-color" content="#CEF0FF">
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#E88BCF;color:#FFF;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;text-align:center}
-main{max-width:440px;margin:0 auto;padding:28px 20px 32px}
-h1{margin:0;font-size:26px;line-height:1.35;font-weight:800;letter-spacing:-.3px}
-.lead{margin:8px 0 0;font-size:15px;opacity:.95}
-.hero{display:block;width:78%;margin:18px auto 0}
-.cards{position:relative;height:190px;margin:8px 0 6px}
-.cards img{position:absolute;top:10px;width:31%;border:3px solid #FFF;border-radius:6px;transform-origin:bottom center}
-.cards img:nth-child(1){left:6%;transform:rotate(-9deg)}
-.cards img:nth-child(2){left:34.5%;top:0;z-index:1}
-.cards img:nth-child(3){right:6%;transform:rotate(9deg)}
-.feat{margin:28px 0 0;padding:0;list-style:none;text-align:left}
-.feat li{display:flex;align-items:center;gap:14px;margin:0 0 10px;padding:14px 16px;background:rgba(255,255,255,.18);border-radius:14px}
-.feat i{flex:none;display:flex;align-items:center;justify-content:center;width:52px;height:52px;background:#FFF;border-radius:50%}.feat img{width:34px;height:34px;object-fit:contain}
-.feat b{display:block;font-size:16px}
-.feat span{font-size:13.5px;opacity:.95;line-height:1.5}
-.play{display:inline-flex;align-items:center;gap:12px;margin:14px auto 0;padding:10px 22px 10px 16px;background:#000;border:1.5px solid #A6A6A6;border-radius:12px;color:#FFF;text-decoration:none;text-align:left}
-.play svg{width:34px;height:38px}
-.play small{display:block;font-size:11px;letter-spacing:.3px}
-.play strong{display:block;font-size:22px;line-height:1.1;font-weight:600}
-.note{margin:12px 0 0;font-size:13px;opacity:.9}
-footer{margin:34px 0 0;font-size:12px;opacity:.85}
-footer a{color:#FFF;margin:0 6px}
+html{background:#D6E1FF}
+body{margin:0 auto;max-width:440px;background:#D6E1FF;color:#2b3140;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;text-align:center}
+section{min-height:100vh;min-height:100svh;position:relative;overflow:hidden}
+/* 1페이지: 앱 소개 첫 장면 (별똥별 · 언덕 위 릴멜) */
+.s1{background:#CEF0FF url(/images/intro01_2.webp) center bottom/100% auto no-repeat;padding:18px 22px 0}
+.top{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:14px;font-weight:800;color:#4B37C9}
+.mini{padding:6px 12px;background:#000;color:#FFF;border-radius:999px;font-size:12px;font-weight:700;text-decoration:none}
+.ch{margin:9vh 0 10px;font-size:12px;letter-spacing:.2em;font-weight:700;color:#7C6CE0}
+h1{margin:0;font-size:27px;line-height:1.42;font-weight:800;color:#3B2E8C;word-break:keep-all}
+.s1 p{margin:14px 0 0;font-size:15px;line-height:1.75;color:#4a4f66}
+.down{position:absolute;left:0;right:0;bottom:20px;font-size:12.5px;font-weight:700;color:#FFF;text-decoration:none}
+.down b{display:block;font-size:22px;line-height:1;animation:bob 1.4s infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+/* 2페이지: 카드 · 친구들 · 설치 */
+.s2{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:36px 22px 24px}
+h2{margin:0;font-size:23px;line-height:1.42;font-weight:800;color:#3B2E8C;word-break:keep-all}
+.deck{display:flex;justify-content:center;gap:10px;margin:18px 0 0;width:100%}
+.deck>span{display:block;width:26%;max-width:92px}
+.deck img{display:block;width:100%;aspect-ratio:3/5;object-fit:cover;border-radius:8px;border:3px solid #FFF;background:#FFF}
+.deck small{display:block;margin:4px 0 0;font-size:12px;color:#5a6070}
+.say{margin:12px 0 0;width:100%;max-width:340px;padding:12px 14px;background:#FFF;border-radius:14px;font-size:13.5px;line-height:1.6;text-align:left}.say b{color:#6D5AE3}
+.sub{margin:22px 0 0;font-size:14px;font-weight:700;color:#3B2E8C}
+.fr{display:flex;gap:8px;margin:10px 0 0;width:100%;max-width:340px}
+.fr span{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px;background:#FFF;border-radius:14px;font-size:11.5px;line-height:1.4;color:#5a6070}
+.fr img{width:38px;height:38px;object-fit:contain}.fr b{color:#2b3140;font-size:13px}
+.cta{margin:22px 0 0}
+.play{display:inline-flex;align-items:center;gap:12px;padding:10px 22px 10px 16px;background:#000;border:1.5px solid #A6A6A6;border-radius:12px;color:#FFF;text-decoration:none;text-align:left}
+.play svg{width:30px;height:34px}.play small{display:block;font-size:11px;letter-spacing:.3px}.play strong{display:block;font-size:21px;line-height:1.1;font-weight:600}
+.free{display:block;margin:8px 0 0;font-size:12.5px;color:#5a6070}
+.rev{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}.rev.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}.down b{animation:none}}
+footer{padding:4px 20px 32px;font-size:12px;color:#5a6070}
+footer a{color:#4B37C9;margin:0 6px}
 footer p{margin:6px 0 0;line-height:1.6}
-</style></head><body><main>
-<h1>외계문어 릴멜의<br>타로카드</h1>
-<p class="lead">신비한 능력을 지닌 외계문어 릴멜이<br>매일 타로카드로 당신의 하루를 봐 드려요.</p>
-<img class="hero" src="/images/mm01.png" alt="">
-<div class="cards"><img src="/images/tr1.jpg" alt=""><img src="/images/tr17.jpg" alt=""><img src="/images/tr21.jpg" alt=""></div>
-<a class="play" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.leelmell.app"><svg viewBox="0 0 30 34"><path d="M1 1l17 16L1 33z" fill="#00D7FE"/><path d="M1 1l22 12.5L18 17z" fill="#00F076"/><path d="M1 33l22-12.5L18 17z" fill="#F83C4C"/><path d="M23 13.5l6 3.5-6 3.5-5-3.5z" fill="#FFCE00"/></svg><span><small>다운로드하기</small><strong>Google Play</strong></span></a>
-<p class="note">안드로이드 앱으로 만나요 · 무료</p>
-<ul class="feat">
-<li><i><img src="/images/tr17.jpg" alt="" style="border-radius:3px;width:26px"></i><div><b>매일 3장의 카드</b><span>과거 · 현재 · 미래와 릴멜의 종합 해설</span></div></li>
-<li><i><img src="/images/ic_sealion_pink_big_01.webp" alt=""></i><div><b>율리움의 연애운</b><span>두 사람의 마음을 6장의 카드로</span></div></li>
-<li><i><img src="/images/ic_stone10_06.webp" alt=""></i><div><b>매일 무료 천연석</b><span>천연석을 모아 크리스탈로 바꿔요</span></div></li>
-</ul>
+</style></head><body>
+
+<section class="s1">
+<div class="top"><span class="logo">릴멜의 타로카드</span><a class="mini" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.leelmell.app">앱 설치</a></div>
+<p class="ch">LEELMELL'S STORY</p>
+<h1>30억 광년 떨어진<br>아리미오니오니별에서<br>외계문어가 불시착했어요</h1>
+<p>신비한 능력을 지닌 문어, 릴멜.<br>지구에서 당신의 카드를 읽어 주기로 했대요.</p>
+<a class="down" href="#meet">릴멜을 만나러 가기<b>⌄</b></a>
+</section>
+
+<section class="s2" id="meet">
+<h2 class="rev">하루에 한 번, 3장의 카드로<br>과거 · 현재 · 미래를 보여줘요</h2>
+<div class="deck rev"><span><img src="/images/tr1.jpg" alt="마법사 카드"><small>과거</small></span><span><img src="/images/tr17.jpg" alt="별 카드"><small>현재</small></span><span><img src="/images/tr21.jpg" alt="세계 카드"><small>미래</small></span></div>
+<div class="say rev"><b>릴멜의 종합 해설</b><br>지나온 길이 오늘의 희망으로 이어지고 있어요. 서두르지 않아도 끝은 좋게 맺어질 거예요.</div>
+<p class="sub rev">릴멜의 친구들도 기다리고 있어요</p>
+<div class="fr rev"><span><img src="/images/ic_sealion_pink_big_01.webp" alt=""><b>율리움</b>6장으로 보는<br>연애운</span><span><img src="/images/com_starfish_02.webp" alt=""><b>트리마레</b>매일 천연석<br>100개 선물</span><span><img src="/images/com_pew_512.webp" alt=""><b>퓨</b>천연석을<br>크리스탈로</span></div>
+<div class="cta rev"><a class="play" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.leelmell.app"><svg viewBox="0 0 30 34"><path d="M1 1l17 16L1 33z" fill="#00D7FE"/><path d="M1 1l22 12.5L18 17z" fill="#00F076"/><path d="M1 33l22-12.5L18 17z" fill="#F83C4C"/><path d="M23 13.5l6 3.5-6 3.5-5-3.5z" fill="#FFCE00"/></svg><span><small>다운로드하기</small><strong>Google Play</strong></span></a><span class="free">안드로이드 · 무료</span></div>
+</section>
+
 <footer><a href="/privacy/">개인정보처리방침</a>·<a href="/terms/">이용약관</a><p>이코노폴 · 사업자등록번호 758-03-00298</p></footer>
-</main></body></html>
+<script>
+// 스크롤해서 화면에 들어오면 차례로 나타나기 (지원하지 않는 브라우저는 바로 보이기)
+var els = document.querySelectorAll('.rev')
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target) } }) }, { threshold: .15 })
+  els.forEach(function (el, i) { el.style.transitionDelay = i * .08 + 's'; io.observe(el) })
+} else els.forEach(function (el) { el.classList.add('on') })
+</script>
+</body></html>

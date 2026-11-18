@@ -1,0 +1,28 @@
+/* 카드뉴스 · 릴스 공용 스타일 (앱 첫 화면과 같은 색) */
+@font-face{font-family:K;font-weight:400;src:url(fonts/noto-sans-kr-korean-400-normal.woff2)}
+@font-face{font-family:K;font-weight:700;src:url(fonts/noto-sans-kr-korean-700-normal.woff2)}
+@font-face{font-family:K;font-weight:800;src:url(fonts/noto-sans-kr-korean-800-normal.woff2)}
+@font-face{font-family:K;font-weight:900;src:url(fonts/noto-sans-kr-korean-900-normal.woff2)}
+@font-face{font-family:L;font-weight:400;src:url(fonts/noto-sans-kr-latin-400-normal.woff2)}
+@font-face{font-family:L;font-weight:700;src:url(fonts/noto-sans-kr-latin-700-normal.woff2)}
+@font-face{font-family:L;font-weight:800;src:url(fonts/noto-sans-kr-latin-800-normal.woff2)}
+@font-face{font-family:L;font-weight:900;src:url(fonts/noto-sans-kr-latin-900-normal.woff2)}
+:root{--sky:#CEF0FF;--lav:#D6E1FF;--hill:#C0C0F8;--ink:#3B2E8C;--accent:#7C6CE0;--octo:#BF77FF;--text:#4a4f66;--mute:#5a6070}
+*{box-sizing:border-box;margin:0}
+body{background:#888;font-family:L,K,sans-serif;color:var(--ink);word-break:keep-all}
+.ch{font-size:30px;letter-spacing:.22em;font-weight:800;color:var(--accent)}
+.h{font-size:76px;line-height:1.32;font-weight:900;color:var(--ink);letter-spacing:-.02em}
+.p{font-size:38px;line-height:1.6;font-weight:400;color:var(--text)}
+.hl{background:linear-gradient(transparent 62%,#FFE98A 62%)}
+.badge{display:inline-flex;align-items:center;gap:16px;padding:10px 30px 10px 10px;background:#FFF;border-radius:999px;font-size:32px;font-weight:800;color:var(--ink)}
+.badge img{width:64px;height:64px;border-radius:50%}
+.tcard{display:block;width:100%;aspect-ratio:7/12;object-fit:cover;border-radius:18px;border:7px solid #FFF;background:#FFF;box-shadow:0 14px 34px rgba(59,46,140,.22)}
+.back{width:100%;aspect-ratio:7/12;border-radius:18px;border:7px solid #FFF;box-shadow:0 14px 34px rgba(59,46,140,.22);
+  background:#6D5AE3 radial-gradient(circle at 50% 50%,#FFE98A 0 9%,transparent 10%),repeating-linear-gradient(45deg,#7C6CE0 0 14px,#6D5AE3 14px 28px)}
+.bubble{background:#FFF;border-radius:34px;padding:38px 44px;font-size:36px;line-height:1.65;color:#2b3140;text-align:left;box-shadow:0 10px 30px rgba(59,46,140,.12)}
+.bubble b{color:#6D5AE3}
+.play{display:inline-flex;align-items:center;gap:26px;padding:22px 48px 22px 36px;background:#000;border:3px solid #A6A6A6;border-radius:26px;color:#FFF;text-align:left}
+.play svg{width:62px;height:70px}.play small{display:block;font-size:24px;letter-spacing:.5px}.play strong{display:block;font-size:46px;line-height:1.1;font-weight:700}
+.star{position:absolute;width:6px;height:6px;border-radius:50%;background:#FFF;box-shadow:0 0 12px 4px rgba(255,255,255,.9)}
+.meteor{position:absolute;width:300px;height:5px;border-radius:5px;background:linear-gradient(90deg,transparent,#FFF);transform:rotate(35deg);transform-origin:right center;filter:drop-shadow(0 0 10px #FFF)}
+.meteor::after{content:"";position:absolute;right:-12px;top:-10px;width:26px;height:26px;border-radius:50%;background:radial-gradient(#FFF 30%,rgba(255,255,255,0) 70%)}

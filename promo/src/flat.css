@@ -7,3 +7,8 @@
 .mk{display:inline-block;padding:0 14px;background:#FFE066;border-radius:14px;line-height:1.35}
 .tcard{box-shadow:none}
 svg.s{position:absolute}
+/* 하단: 단색 언덕 + 카드 든 릴멜 (작게) */
+.mound{position:absolute;left:-200px;right:-200px;top:1800px;height:900px;border-radius:50%;background:#C0C0F8}
+.octo{position:absolute;left:50%;top:1640px;width:420px;margin-left:-210px}
+.big{position:absolute;left:50%;transform:translateX(-50%) rotate(var(--r,0deg))}
+.big .tcard{border-width:14px;border-radius:30px}

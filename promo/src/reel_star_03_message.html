@@ -2,29 +2,24 @@
 <html lang="ko"><head><meta charset="utf-8">
 <link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css">
 <style>
-/* 릴스 '별' 편 · 9–12초: 릴멜의 한마디 */
-.disc{position:absolute;left:560px;top:380px;width:420px;height:420px;border-radius:50%;background:#FFF5C2}
-.card{position:absolute;left:600px;top:370px;width:280px;transform:rotate(8deg)}
-.card .tcard{border-width:10px;border-radius:22px}
-.tag{position:absolute;left:110px;top:440px;font-size:34px;font-weight:800;color:var(--accent);letter-spacing:.1em}
-.ttl{position:absolute;left:110px;top:490px;font-size:96px;line-height:1.15;font-weight:900;color:var(--ink)}
-.ttl small{display:block;font-size:40px;font-weight:700;color:var(--mute);margin-top:10px}
-.bub{position:absolute;left:90px;right:90px;top:940px;padding:56px 60px 60px;background:#FFF;border-radius:56px}
-.bub::after{content:"";position:absolute;right:260px;bottom:-46px;border-left:34px solid transparent;border-right:34px solid transparent;border-top:48px solid #FFF}
+/* 릴스 '별' 편 · 9–12초: 큰 카드 위에 릴멜의 한마디 */
+.top{top:160px}
+.card{top:270px;width:620px;--r:4deg}
+.bub{position:absolute;left:70px;right:70px;top:1180px;padding:44px 52px 50px;background:#FFF;border-radius:52px;z-index:2}
+.bub::after{content:"";position:absolute;left:50%;margin-left:-34px;bottom:-46px;border-left:34px solid transparent;border-right:34px solid transparent;border-top:48px solid #FFF}
 .who{display:inline-block;padding:8px 26px;background:var(--octo);border-radius:999px;color:#FFF;font-size:32px;font-weight:800}
-.line{margin-top:26px;font-size:62px;line-height:1.45;font-weight:900;color:var(--ink)}
+.kw{display:inline-block;margin-left:12px;padding:8px 22px;background:#FFF5C2;border-radius:999px;color:var(--ink);font-size:30px;font-weight:800}
+.line{margin-top:22px;font-size:60px;line-height:1.45;font-weight:900;color:var(--ink)}
 </style></head><body>
 <div class="f" id="frame">
-  <div class="top" style="left:110px;right:auto;top:240px"><span class="pill">🐙 릴멜의 한마디</span></div>
-  <div class="disc"></div>
-  <div class="card"><img class="tcard" src="../../images/tr17.jpg" alt="별 카드"></div>
-  <p class="tag">XVII</p>
-  <p class="ttl">별<small>희망 · 회복 · 치유</small></p>
-  <div class="bub"><span class="who">릴멜</span>
+  <div class="top"><span class="pill">🐙 릴멜의 한마디</span></div>
+  <div class="big card"><img class="tcard" src="cards/tr17@2x.jpg" alt="별 카드"></div>
+  <div class="bub"><span class="who">릴멜</span><span class="kw">별 · 희망 · 회복</span>
     <p class="line">요즘 많이 지쳤죠?<br>이제 <span class="mk">채워질 차례</span>예요.</p></div>
-  <img class="hill" src="hill.png" alt="">
+  <div class="mound"></div>
+  <img class="octo" src="../../images/mm01.png" alt="">
 </div>
 <script src="sparkle.js"></script>
-<script>sparkles([[70,140,60,'#FFF'],[940,200,50,'#FFD43B'],[500,640,64,'#FFD43B'],[960,760,70,'#FFF'],[60,760,46,'#FFD43B']],
- [[520,190,8,'#FFF'],[1010,560,9,'#FFF'],[640,250,7,'#FFD43B'],[90,1500,9,'#FFF'],[200,1380,7,'#FFF']])</script>
+<script>sparkles([[50,380,64,'#FFD43B'],[970,330,70,'#FFF'],[980,1050,50,'#FFD43B'],[40,1000,70,'#FFF'],[910,70,44,'#FFD43B']],
+ [[60,760,8,'#FFF'],[1030,760,9,'#FFF'],[150,1700,8,'#FFF'],[930,1700,8,'#FFF']])</script>
 </body></html>

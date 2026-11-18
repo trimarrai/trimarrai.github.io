@@ -1,43 +1,26 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8">
-<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css">
 <style>
-/* 릴스 '별' 편 · 6–9초 장면 (카드 공개 직후) · 1080×1920 · 플랫 디자인 (그라데이션·그림자 없음) */
-.f{position:relative;width:1080px;height:1920px;overflow:hidden;background:#CEF0FF}
-.hill{position:absolute;left:0;bottom:-470px;width:1080px}
-.top{position:absolute;top:250px;left:0;right:0;text-align:center}
-.pill{display:inline-block;padding:16px 38px;background:#FFF;border-radius:999px;font-size:36px;font-weight:800;color:var(--ink)}
-/* 카드 뒤 단색 원 + 기울인 보라 판 */
-.disc{position:absolute;left:50%;top:400px;width:640px;height:640px;margin-left:-320px;border-radius:50%;background:#FFF5C2}
-.plate{position:absolute;left:50%;top:410px;width:380px;height:651px;margin-left:-170px;border-radius:28px;background:var(--octo);transform:rotate(6deg)}
-.card{position:absolute;left:50%;top:390px;width:360px;margin-left:-190px;transform:rotate(-4deg)}
-.card .tcard{border-width:12px;border-radius:26px;box-shadow:none}
-.title{position:absolute;top:1095px;left:0;right:0;text-align:center}
-.num{display:inline-block;padding:6px 22px;background:var(--ink);border-radius:999px;font-size:30px;font-weight:800;letter-spacing:.2em;color:#FFF}
-.name{margin-top:4px;font-size:128px;line-height:1.15;font-weight:900;color:var(--ink)}
-.msg{position:absolute;top:1300px;z-index:2;left:90px;right:90px;text-align:center;font-size:44px;line-height:1.6;font-weight:800;color:var(--ink)}
-.msg .mk{display:inline-block;padding:0 14px;background:#FFE066;border-radius:14px;line-height:1.35}
-svg.s{position:absolute}
+/* 릴스 '별' 편 · 4–9초: 카드 공개 (카드를 화면 가득) */
+.top{top:180px}
+.plate{position:absolute;left:50%;top:330px;width:640px;height:1097px;margin-left:-300px;border-radius:34px;background:var(--octo);transform:rotate(5deg)}
+.card{top:300px;width:640px;--r:-3deg}
+.title{position:absolute;top:1450px;left:0;right:0;text-align:center;font-size:0}
+.num{display:inline-block;vertical-align:middle;padding:8px 24px;background:var(--ink);border-radius:999px;font-size:34px;font-weight:800;letter-spacing:.15em;color:#FFF}
+.name{display:inline-block;vertical-align:middle;margin-left:22px;font-size:104px;line-height:1.1;font-weight:900;color:var(--ink)}
+.msg{position:absolute;top:1580px;left:0;right:0;text-align:center;font-size:46px;font-weight:800;color:var(--ink);z-index:2}
 </style></head><body>
 <div class="f" id="frame">
-  <!-- 단색 반짝이 (4각 별) · 점 -->
-  <svg class="s" style="left:120px;top:430px" width="70" height="70" viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFD43B"/></svg>
-  <svg class="s" style="left:880px;top:360px" width="96" height="96" viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFF"/></svg>
-  <svg class="s" style="left:900px;top:860px" width="56" height="56" viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFD43B"/></svg>
-  <svg class="s" style="left:110px;top:900px" width="84" height="84" viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFF"/></svg>
-  <svg class="s" style="left:180px;top:150px" width="60" height="60" viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFF"/></svg>
-  <svg class="s" style="left:820px;top:140px" width="50" height="50" viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFD43B"/></svg>
-  <svg class="s" style="left:0;top:0" width="1080" height="1100">
-    <circle cx="300" cy="380" r="9" fill="#FFF"/><circle cx="960" cy="560" r="11" fill="#FFF"/><circle cx="70" cy="690" r="8" fill="#FFD43B"/>
-    <circle cx="1000" cy="250" r="8" fill="#FFF"/><circle cx="250" cy="1010" r="10" fill="#FFF"/><circle cx="860" cy="1030" r="8" fill="#FFF"/>
-  </svg>
-
   <div class="top"><span class="pill">🐙 릴멜이 고른 오늘의 카드</span></div>
-  <div class="disc"></div>
   <div class="plate"></div>
-  <div class="card"><img class="tcard" src="../../images/tr17.jpg" alt="별 카드"></div>
-  <div class="title"><span class="num">XVII</span><div class="name">별</div></div>
-  <p class="msg">힘든 시간이 지나고<br><span class="mk">다시 희망이 차오르는</span> 카드예요</p>
-  <img class="hill" src="hill.png" alt="">
+  <div class="big card"><img class="tcard" src="cards/tr17@2x.jpg" alt="별 카드"></div>
+  <div class="title"><span class="num">XVII</span><span class="name">별</span></div>
+  <p class="msg"><span class="mk">다시 희망이 차오르는</span> 카드예요</p>
+  <div class="mound"></div>
+  <img class="octo" src="../../images/mm01.png" alt="" style="top:1690px;width:360px;margin-left:-180px">
 </div>
+<script src="sparkle.js"></script>
+<script>sparkles([[50,420,64,'#FFD43B'],[970,380,70,'#FFF'],[980,1250,50,'#FFD43B'],[40,1200,70,'#FFF'],[110,90,50,'#FFF'],[910,80,44,'#FFD43B']],
+ [[60,800,8,'#FFF'],[1030,820,9,'#FFF'],[200,1720,8,'#FFF'],[880,1720,8,'#FFF']])</script>
 </body></html>

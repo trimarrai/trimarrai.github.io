@@ -18,7 +18,7 @@
 .app .badge{font-size:40px;padding:12px 38px 12px 12px}.app .badge img{width:80px;height:80px}
 .cta{position:absolute;top:1460px;left:0;right:0;text-align:center}
 .play{border-color:#000}
-.free{position:absolute;left:720px;top:-26px;padding:8px 22px;background:#FFE066;border-radius:999px;font-size:30px;font-weight:900;color:var(--ink);transform:rotate(8deg)}
+.free{position:absolute;rotate:8deg;left:720px;top:-26px;padding:8px 22px;background:#FFE066;border-radius:999px;font-size:30px;font-weight:900;color:var(--ink)}
 .octo{left:auto;right:-30px;margin:0;top:1660px;width:340px}
 </style></head><body>
 <div class="f" id="frame">
@@ -36,4 +36,13 @@
 <script src="sparkle.js"></script>
 <script>sparkles([[50,420,56,'#FFD43B'],[970,400,64,'#FFF'],[110,90,50,'#FFF'],[910,80,44,'#FFD43B'],[90,1400,50,'#FFF']],
  [[330,130,8,'#FFF'],[1030,300,8,'#FFF'],[60,330,7,'#FFD43B']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){
+  rise('.q',t,0,.4)
+  var x=E.back(E.p(t,.2,.8))
+  set('.fan .l',{translate:(1-x)*330+'px 0',opacity:E.p(t,.2,.3)}); set('.fan .r',{translate:-(1-x)*330+'px 0',opacity:E.p(t,.2,.3)})
+  pop('.fan .c',t,0,.4)
+  pop('.app',t,.9); pop('.cta',t,1.2); pop('.free',t,1.6,.4)
+  set('.free',{rotate:(8+Math.sin(t*7)*6)+'deg'}); set('.play',{scale:String(1+.04*Math.max(0,Math.sin((t-1.8)*5))*(t>1.8))})
+}</script>
 </body></html>

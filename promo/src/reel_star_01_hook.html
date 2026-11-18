@@ -25,4 +25,12 @@
 <script src="sparkle.js"></script>
 <script>sparkles([[60,560,64,'#FFE066'],[960,520,70,'#FFF'],[970,1200,50,'#FFE066'],[50,1250,70,'#FFF'],[120,100,50,'#FFF'],[900,90,44,'#FFE066']],
  [[60,900,8,'#FFF'],[1030,900,9,'#FFF'],[540,120,6,'#FFF'],[180,1640,8,'#FFF'],[900,1640,8,'#FFF']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){
+  pop('.hook',t,0,.5)
+  // 카드: 살짝 흔들리다가 끝에서 뒤집히며 사라짐(다음 장면에서 앞면이 나타남)
+  var w=Math.sin(t*9)*2.2*E.p(t,.4,.6)*(1-E.p(t,2.2,2.5)), f=E.p(t,2.55,2.95)
+  set('.cb',{scale:(1-f)+' 1',translate:'0 '+(1-E.out(E.p(t,0,.5)))*120+'px',rotate:w+'deg'})
+  pop('.q',t,.8,.5); set('.q',{rotate:(Math.sin(t*6)*10)+'deg'}); if(t>2.55)set('.q',{opacity:1-f})
+}</script>
 </body></html>

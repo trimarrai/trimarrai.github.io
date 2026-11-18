@@ -23,4 +23,11 @@
 <script src="sparkle.js"></script>
 <script>sparkles([[50,420,64,'#FFD43B'],[970,380,70,'#FFF'],[980,1250,50,'#FFD43B'],[40,1200,70,'#FFF'],[110,90,50,'#FFF'],[910,80,44,'#FFD43B']],
  [[60,800,8,'#FFF'],[1030,820,9,'#FFF'],[200,1720,8,'#FFF'],[880,1720,8,'#FFF']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){
+  var f=E.out(E.p(t,0,.4)); set('.card',{scale:f+' 1'})
+  set('.plate',{opacity:E.p(t,.3,.5),rotate:(-8+13*E.out(E.p(t,.3,.8)))+'deg'})
+  set('.card,.plate',{translate:'0 '+(-E.p(t,.8,4.5)*12)+'px'})
+  pop('.top',t,.2); pop('.title',t,.7,.5); rise('.msg',t,1.1)
+}</script>
 </body></html>

@@ -10,16 +10,24 @@
 .who{display:inline-block;padding:8px 26px;background:var(--octo);border-radius:999px;color:#FFF;font-size:32px;font-weight:800}
 .kw{display:inline-block;margin-left:12px;padding:8px 22px;background:#FFF5C2;border-radius:999px;color:var(--ink);font-size:30px;font-weight:800}
 .line{margin-top:22px;font-size:60px;line-height:1.45;font-weight:900;color:var(--ink)}
+.l1,.l2{display:inline-block}
 </style></head><body>
 <div class="f" id="frame">
   <div class="top"><span class="pill">🐙 릴멜의 한마디</span></div>
   <div class="big card"><img class="tcard" src="cards/tr17@2x.jpg" alt="별 카드"></div>
   <div class="bub"><span class="who">릴멜</span><span class="kw">별 · 희망 · 회복</span>
-    <p class="line">요즘 많이 지쳤죠?<br>이제 <span class="mk">채워질 차례</span>예요.</p></div>
+    <p class="line"><span class="l1">요즘 많이 지쳤죠?</span><br><span class="l2">이제 <span class="mk">채워질 차례</span>예요.</span></p></div>
   <div class="mound"></div>
   <img class="octo" src="../../images/mm01.png" alt="">
 </div>
 <script src="sparkle.js"></script>
 <script>sparkles([[50,380,64,'#FFD43B'],[970,330,70,'#FFF'],[980,1050,50,'#FFD43B'],[40,1000,70,'#FFF'],[910,70,44,'#FFD43B']],
  [[60,760,8,'#FFF'],[1030,760,9,'#FFF'],[150,1700,8,'#FFF'],[930,1700,8,'#FFF']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){
+  rise('.card',t,0,.5); pop('.top',t,.1)
+  pop('.bub',t,.4,.5)
+  set('.l1',{clipPath:'inset(0 '+(100-100*E.p(t,.9,1.7))+'% 0 0)'})
+  set('.l2',{clipPath:'inset(0 '+(100-100*E.p(t,1.9,2.8))+'% 0 0)'})
+}</script>
 </body></html>

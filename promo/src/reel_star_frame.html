@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css">
+<style>
+/* 릴스 '별' 편 · 6–9초 장면 (카드 공개 직후) · 1080×1920 */
+.f{position:relative;width:1080px;height:1920px;overflow:hidden;
+  background:linear-gradient(180deg,#6D5AE3 0%,#9A8CF2 28%,#BFD9FF 52%,#CEF0FF 64%)}
+.hill{position:absolute;left:0;bottom:-420px;width:1080px}
+.top{position:absolute;top:250px;left:0;right:0;text-align:center}
+.pill{display:inline-block;padding:14px 34px;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.5);border-radius:999px;font-size:34px;font-weight:700;color:#FFF;letter-spacing:.02em}
+.glow{position:absolute;left:50%;top:330px;width:760px;height:760px;margin-left:-380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,233,138,.85) 0%,rgba(255,233,138,.35) 35%,rgba(255,233,138,0) 68%)}
+.ray{position:absolute;left:50%;top:700px;width:1100px;height:1100px;margin:-550px 0 0 -550px;
+  background:repeating-conic-gradient(rgba(255,255,255,.16) 0 6deg,transparent 6deg 18deg);
+  -webkit-mask:radial-gradient(circle,#000 20%,transparent 62%);mask:radial-gradient(circle,#000 20%,transparent 62%)}
+.card{position:absolute;left:50%;top:390px;width:360px;margin-left:-180px;transform:rotate(-3deg)}
+.card .tcard{border-width:10px;border-radius:24px;box-shadow:0 0 0 4px rgba(255,233,138,.7),0 30px 70px rgba(59,46,140,.4)}
+.title{position:absolute;top:1040px;left:0;right:0;text-align:center}
+.num{font-size:40px;font-weight:800;letter-spacing:.3em;color:var(--accent)}
+.name{margin-top:6px;font-size:120px;line-height:1.1;font-weight:900;color:var(--ink);text-shadow:0 4px 0 #FFE98A}
+.msg{position:absolute;top:1232px;z-index:2;left:110px;right:110px;text-align:center;font-size:44px;line-height:1.5;font-weight:800;color:var(--ink)}
+.msg .hl{background:linear-gradient(transparent 60%,#FFE98A 60%)}
+.sp{position:absolute;color:#FFF;font-size:40px;line-height:1;text-shadow:0 0 14px #FFF}
+</style></head><body>
+<div class="f" id="frame">
+  <div class="ray"></div>
+  <div class="glow"></div>
+  <!-- 반짝이 -->
+  <span class="star" style="left:120px;top:190px"></span><span class="star" style="left:300px;top:330px;width:4px;height:4px"></span>
+  <span class="star" style="left:880px;top:200px"></span><span class="star" style="left:960px;top:420px;width:4px;height:4px"></span>
+  <span class="star" style="left:170px;top:560px;width:5px;height:5px"></span><span class="star" style="left:940px;top:760px"></span>
+  <span class="sp" style="left:190px;top:400px">✦</span><span class="sp" style="left:830px;top:330px;font-size:54px">✦</span>
+  <span class="sp" style="left:860px;top:900px;font-size:34px">✦</span><span class="sp" style="left:150px;top:860px;font-size:48px">✦</span>
+  <div class="meteor" style="left:60px;top:120px;width:260px"></div>
+
+  <div class="top"><span class="pill">🐙 릴멜이 고른 오늘의 카드</span></div>
+  <div class="card"><img class="tcard" src="../../images/tr17.jpg" alt="별 카드"></div>
+  <div class="title"><div class="num">XVII</div><div class="name">별</div></div>
+  <p class="msg">힘든 시간이 지나고<br><span class="hl">다시 희망이 차오르는</span> 카드예요</p>
+  <img class="hill" src="hill.png" alt="">
+</div>
+</body></html>

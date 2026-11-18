@@ -1,0 +1,9 @@
+/* 릴스 플랫 공용 (단색 · 그림자·그라데이션 없음) · 1080×1920 */
+.f{position:relative;width:1080px;height:1920px;overflow:hidden;background:#CEF0FF}
+.f.night{background:#2E2770}
+.hill{position:absolute;left:0;bottom:-470px;width:1080px}
+.top{position:absolute;top:250px;left:0;right:0;text-align:center}
+.pill{display:inline-block;padding:16px 38px;background:#FFF;border-radius:999px;font-size:36px;font-weight:800;color:var(--ink)}
+.mk{display:inline-block;padding:0 14px;background:#FFE066;border-radius:14px;line-height:1.35}
+.tcard{box-shadow:none}
+svg.s{position:absolute}

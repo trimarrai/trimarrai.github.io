@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css">
+<style>
+/* 릴스 '별' 편 · 0–2초 훅: 밤하늘 + 뒷면 카드 */
+.hook{position:absolute;top:300px;left:0;right:0;text-align:center;color:#FFF;font-size:68px;line-height:1.4;font-weight:900}
+.hook .mk{color:var(--ink)}
+.moon{position:absolute;left:50%;top:620px;width:620px;height:620px;margin-left:-310px;border-radius:50%;background:#4A3FA0}
+.cb{position:absolute;left:50%;top:600px;width:380px;height:651px;margin-left:-190px;transform:rotate(4deg);border-radius:28px;border:12px solid #FFF;background:#6D5AE3;overflow:hidden}
+.cb .in{position:absolute;inset:22px;border:5px solid #FFE066;border-radius:14px}
+.cb svg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.q{position:absolute;left:50%;top:1300px;margin-left:-60px;width:120px;height:120px;border-radius:50%;background:#FFE066;color:var(--ink);font-size:84px;font-weight:900;line-height:120px;text-align:center;transform:rotate(-8deg)}
+</style></head><body>
+<div class="f night" id="frame">
+  <p class="hook">이 영상을 본 당신에게<br><span class="mk">온 카드</span>예요</p>
+  <div class="moon"></div>
+  <div class="cb"><div class="in"></div>
+    <svg width="220" height="220" viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg>
+    <svg width="60" height="60" viewBox="0 0 10 10" style="top:16%"><circle cx="5" cy="5" r="4" fill="#FFF"/></svg>
+    <svg width="60" height="60" viewBox="0 0 10 10" style="top:84%"><circle cx="5" cy="5" r="4" fill="#FFF"/></svg>
+  </div>
+  <div class="q">?</div>
+  <img class="hill" src="hill.png" alt="">
+</div>
+<script src="sparkle.js"></script>
+<script>sparkles([[130,640,70,'#FFE066'],[880,560,90,'#FFF'],[900,1120,56,'#FFE066'],[110,1080,80,'#FFF'],[200,150,54,'#FFF'],[840,150,46,'#FFE066']],
+ [[320,560,8,'#FFF'],[980,800,10,'#FFF'],[70,860,7,'#FFE066'],[1000,300,7,'#FFF'],[260,1260,9,'#FFF'],[820,1330,8,'#FFF'],[560,200,6,'#FFF']])</script>
+</body></html>

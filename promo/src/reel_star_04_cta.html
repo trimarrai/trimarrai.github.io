@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css">
+<style>
+/* 릴스 '별' 편 · 12–15초: 설치 유도 */
+.q{position:absolute;top:240px;left:0;right:0;text-align:center;font-size:76px;line-height:1.35;font-weight:900;color:var(--ink)}
+.deck{position:absolute;top:530px;left:0;right:0;display:flex;justify-content:center;gap:30px}
+.deck span{width:250px;text-align:center}
+.deck span:nth-child(1){transform:rotate(-6deg) translateY(24px)}.deck span:nth-child(3){transform:rotate(6deg) translateY(24px)}
+.deck .tcard{border-width:10px;border-radius:20px}
+.deck b{display:inline-block;margin-top:22px;padding:6px 24px;border-radius:999px;background:#FFF;font-size:32px;font-weight:800;color:var(--ink)}
+.deck span:nth-child(2) b{background:var(--ink);color:#FFF}
+.app{position:absolute;top:1130px;left:0;right:0;text-align:center}
+.app .badge{font-size:40px;padding:12px 38px 12px 12px}.app .badge img{width:80px;height:80px}
+.cta{position:absolute;top:1270px;left:0;right:0;text-align:center}
+.play{border-color:#000}
+.free{position:absolute;left:720px;top:-26px;padding:8px 22px;background:#FFE066;border-radius:999px;font-size:30px;font-weight:900;color:var(--ink);transform:rotate(8deg)}
+</style></head><body>
+<div class="f" id="frame">
+  <p class="q">내 과거 · 현재 · 미래는<br>어떤 카드일까?</p>
+  <div class="deck">
+    <span><img class="tcard" src="../../images/tr1.jpg" alt="마법사"><b>과거</b></span>
+    <span><img class="tcard" src="../../images/tr17.jpg" alt="별"><b>현재</b></span>
+    <span><img class="tcard" src="../../images/tr21.jpg" alt="세계"><b>미래</b></span>
+  </div>
+  <div class="app"><span class="badge"><img src="../../images/icon-192.png" alt="">릴멜의 타로카드</span></div>
+  <div class="cta"><span class="play"><svg viewBox="0 0 30 34"><path d="M1 1l17 16L1 33z" fill="#00D7FE"/><path d="M1 1l22 12.5L18 17z" fill="#00F076"/><path d="M1 33l22-12.5L18 17z" fill="#F83C4C"/><path d="M23 13.5l6 3.5-6 3.5-5-3.5z" fill="#FFCE00"/></svg><span><small>다운로드하기</small><strong>Google Play</strong></span></span><span class="free">무료!</span></div>
+  <img class="hill" src="hill.png" alt="">
+</div>
+<script src="sparkle.js"></script>
+<script>sparkles([[90,470,60,'#FFD43B'],[940,450,70,'#FFF'],[120,1180,50,'#FFF'],[930,1150,56,'#FFD43B'],[160,120,50,'#FFF'],[880,110,44,'#FFD43B']],
+ [[330,180,8,'#FFF'],[1000,320,8,'#FFF'],[60,330,7,'#FFD43B'],[990,1060,9,'#FFF'],[70,1000,8,'#FFF']])</script>
+</body></html>

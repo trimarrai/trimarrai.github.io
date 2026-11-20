@@ -1,0 +1,20 @@
+/* 카드뉴스 공용 · 1080×1350 (인스타 4:5) · 플랫 */
+.f{width:1080px;height:1350px}
+.pg{position:absolute;top:56px;right:60px;padding:8px 22px;background:#FFF;border-radius:999px;font-size:28px;font-weight:800;color:var(--ink)}
+.brand{position:absolute;top:50px;left:60px;display:flex;align-items:center;gap:12px;font-size:28px;font-weight:800;color:var(--ink)}
+.brand img{width:52px;height:52px;border-radius:50%}
+.mound{top:1250px}
+.octo{top:1150px;width:330px;margin-left:-165px}
+/* 2~4장: 왼쪽 큰 카드 + 오른쪽 설명 */
+.pos{position:absolute;top:170px;left:60px;display:inline-block;padding:10px 34px;border-radius:999px;background:var(--ink);color:#FFF;font-size:40px;font-weight:900}
+.hd{position:absolute;top:170px;left:300px;right:60px;font-size:46px;line-height:1.35;font-weight:900;color:var(--ink)}
+.side .card{position:absolute;left:60px;top:330px;width:470px;rotate:-3deg}
+.side .tcard{border-radius:24px}
+.col{position:absolute;left:575px;right:56px;top:350px}
+.col .num{font-size:30px;font-weight:800;letter-spacing:.18em;color:var(--accent)}
+.col .nm{font-size:92px;line-height:1.15;font-weight:900;color:var(--ink)}
+.col .kw{display:inline-block;margin-top:14px;padding:6px 20px;background:#FFF5C2;border-radius:999px;font-size:30px;font-weight:800;color:var(--ink)}
+.col p.t{margin-top:34px;font-size:36px;line-height:1.6;font-weight:500;color:#2b3140}
+.col p.t b{font-weight:900;color:var(--ink)}
+.tip{position:absolute;left:575px;right:56px;top:960px;padding:26px 30px;background:#FFF;border-radius:30px;font-size:32px;line-height:1.5;font-weight:700;color:var(--ink)}
+.tip i{font-style:normal;display:block;font-size:26px;color:var(--octo);font-weight:900;margin-bottom:6px}

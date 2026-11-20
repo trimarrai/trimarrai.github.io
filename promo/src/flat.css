@@ -14,3 +14,16 @@ svg.s{position:absolute}
 .big .tcard{border:0;border-radius:24px;background:none}
 /* 새 카드 디자인: 카드 자체에 테두리가 있어 흰 테두리 없이 */
 .tcard{border:0!important;background:none!important}
+/* 뒷면 카드 (플랫) */
+.bk{position:relative;width:100%;aspect-ratio:7/12;border-radius:26px;border:12px solid #FFF;background:#6D5AE3;overflow:hidden}
+.bk::before{content:"";position:absolute;inset:22px;border:5px solid #FFE066;border-radius:14px}
+.bk svg{position:absolute;left:50%;top:50%;width:46%;transform:translate(-50%,-50%)}
+/* 카드 3장 부채꼴 */
+.fan3{position:absolute;left:0;right:0}
+.fan3>span{position:absolute;left:50%;width:340px}
+.fan3 .l{margin-left:-470px;top:90px;rotate:-7deg}
+.fan3 .r{margin-left:130px;top:90px;rotate:7deg}
+.fan3 .c{margin-left:-230px;width:460px;top:0;z-index:2}
+.fan3 .tcard{border-radius:22px}
+.no{position:absolute;left:50%;bottom:-52px;margin-left:-56px;width:112px;height:112px;border-radius:50%;background:#FFE066;color:var(--ink);font-size:66px;font-weight:900;line-height:112px;text-align:center;z-index:3}
+.fan3 .l .no{left:44%}.fan3 .r .no{left:56%}

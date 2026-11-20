@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css">
+<style>
+/* 릴스 '카드 고르기' · 7–9초: 3장 한꺼번에 공개 */
+.h1{position:absolute;top:220px;left:0;right:0;text-align:center;font-size:70px;line-height:1.38;font-weight:900;color:var(--ink)}
+.fan3{top:520px}
+.nm{position:absolute;top:1450px;left:0;right:0;text-align:center;font-size:40px;font-weight:800;color:var(--ink)}
+.nm span{display:inline-block;margin:0 8px;padding:8px 26px;background:#FFF;border-radius:999px}
+</style></head><body>
+<div class="f" id="frame">
+  <p class="h1">어떤 카드를 골랐나요?<br><span class="mk">1 · 2 · 3번 공개!</span></p>
+  <div class="fan3">
+    <span class="l"><img class="tcard" src="cards/tr1@2x.jpg" alt="마법사"><b class="no">1</b></span>
+    <span class="r"><img class="tcard" src="cards/tr21@2x.jpg" alt="세계"><b class="no">3</b></span>
+    <span class="c"><img class="tcard" src="cards/tr17@2x.jpg" alt="별"><b class="no">2</b></span>
+  </div>
+  <p class="nm"><span>1 마법사</span><span>2 별</span><span>3 세계</span></p>
+  <div class="mound"></div>
+  <img class="octo" src="../../images/mm01.png" alt="">
+</div>
+<script src="sparkle.js"></script>
+<script>sparkles([[70,120,56,'#FFD43B'],[930,110,64,'#FFF'],[60,470,44,'#FFF'],[980,480,50,'#FFD43B']],
+ [[300,140,7,'#FFF'],[760,150,8,'#FFF'],[1020,800,8,'#FFF'],[40,900,8,'#FFF']])</script>
+</body></html>

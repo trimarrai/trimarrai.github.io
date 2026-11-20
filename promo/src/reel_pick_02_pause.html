@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css">
+<style>
+/* 릴스 '카드 고르기' · 5–7초: 멈추고 댓글로 번호 */
+.stop{position:absolute;top:200px;left:50%;margin-left:-170px;width:340px;padding:18px 0;border-radius:999px;background:#FFE066;text-align:center;font-size:54px;font-weight:900;color:var(--ink)}
+.h1{position:absolute;top:330px;left:0;right:0;text-align:center;color:#FFF;font-size:66px;line-height:1.38;font-weight:900}
+.fan3{top:600px;scale:.86;transform-origin:50% 0}
+.cmt{position:absolute;left:120px;right:120px;top:1330px;display:flex;align-items:center;gap:22px;padding:26px 34px;background:#FFF;border-radius:40px;z-index:4}
+.cmt i{flex:none;width:76px;height:76px;border-radius:50%;background:#FFE066;font-style:normal;font-size:40px;line-height:76px;text-align:center}
+.cmt span{font-size:44px;font-weight:800;color:var(--ink)}.cmt small{display:block;font-size:28px;font-weight:700;color:var(--mute)}
+.f.night .mound{background:#4A3FA0}
+</style></head><body>
+<div class="f night" id="frame">
+  <p class="stop">잠깐! ✋</p>
+  <p class="h1">골랐다면<br>댓글에 번호를 남겨 주세요</p>
+  <div class="fan3">
+    <span class="l"><div class="bk"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div><b class="no">1</b></span>
+    <span class="r"><div class="bk"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div><b class="no">3</b></span>
+    <span class="c"><div class="bk"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div><b class="no">2</b></span>
+  </div>
+  <div class="cmt"><i>💬</i><span><small>댓글</small>저는 2번이요!</span></div>
+  <div class="mound"></div>
+  <img class="octo" src="../../images/mm01.png" alt="">
+</div>
+<script src="sparkle.js"></script>
+<script>sparkles([[70,120,56,'#FFE066'],[930,110,64,'#FFF'],[60,560,44,'#FFF'],[980,560,50,'#FFE066']],
+ [[300,140,7,'#FFF'],[760,150,8,'#FFF'],[1020,900,8,'#FFF'],[40,1000,8,'#FFF']])</script>
+</body></html>

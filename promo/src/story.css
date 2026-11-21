@@ -1,0 +1,12 @@
+/* 릴스 '릴멜은 왜 타로를 볼까?' 공용 · 플랫 */
+.sea{position:absolute;left:0;right:0;bottom:0;background:#5FB8EE}
+.sea svg{position:absolute;left:0;top:-38px;width:1080px;height:40px}
+.wave{position:absolute;left:0;right:0;height:60px}
+.sand{position:absolute;left:-100px;right:-100px;border-radius:50% 50% 0 0;background:#F6DFA6}
+.sub{position:absolute;left:0;right:0;text-align:center;font-size:44px;line-height:1.5;font-weight:800;color:var(--ink)}
+.night .sub{color:#FFF}
+.gauge{position:absolute;left:140px;right:140px;height:64px;border-radius:999px;background:#FFF;overflow:hidden}
+.gauge i{position:absolute;left:8px;top:8px;bottom:8px;border-radius:999px;background:#7CD3F7}
+.gl{position:absolute;left:0;right:0;text-align:center;font-size:34px;font-weight:800;color:var(--ink)}
+.night .gl{color:#FFF}
+.bb{position:absolute;padding:18px 30px;background:#FFF;border-radius:34px;font-size:40px;font-weight:900;color:var(--ink);white-space:nowrap}

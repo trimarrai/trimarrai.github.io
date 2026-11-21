@@ -255,7 +255,7 @@ function statsTab() {
     sub('결과') + barList(sumPrefix('upd_', 7).filter(([k]) => !k.startsWith('run_')), (k) => UPD[k] || k) +
     sub('실행 중인 화면 버전') + barList(sumPrefix('upd_run_', 7), (k) => k.replace(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})_/, '$2/$3 $4:$5 · '))) + dailyNote()
 }
-const UPD = { latest: '최신 버전', dl: '새 버전 받음', set: '새 버전 적용', old_build: '빌드가 낮아 건너뜀', err_rolled_back: '적용 실패 → 되돌림', err_load: '업데이트 기능 로드 실패' }
+const UPD = { latest: '최신 버전', dl: '새 버전 받음', set: '새 버전 적용 (다음에 열 때)', set_now: '새 버전 바로 적용', old_build: '빌드가 낮아 건너뜀', err_rolled_back: '적용 실패 → 되돌림', err_load: '업데이트 기능 로드 실패' }
 
 // ---------- 최근 탭: 방문 기록 ----------
 function recentTab() {

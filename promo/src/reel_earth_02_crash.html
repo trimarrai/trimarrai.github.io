@@ -25,4 +25,13 @@
 <script src="sparkle.js"></script>
 <script>sparkles([[690,860,60,'#FFD43B'],[930,830,50,'#FFD43B'],[820,980,44,'#FFF'],[70,180,46,'#FFF'],[960,190,40,'#FFD43B']],
  [[300,520,8,'#FFF'],[1000,600,8,'#FFF'],[620,1100,7,'#FFF']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){
+  var k=Math.max(0,1-t/.5); set('#frame',{translate:(Math.sin(t*90)*22*k)+'px '+(Math.cos(t*70)*16*k)+'px',scale:String(1+.05*k)})
+  pop('.boom',t,0,.35); set('svg.boom',{rotate:(-10+Math.sin(t*5)*4)+'deg'})
+  $('.puff').forEach(function(el,i){var x=E.out(E.p(t,.02*i,.5));el.style.scale=x;el.style.opacity=1-E.p(t,1.6,2.4)})
+  pop('.ep',t,.2,.3); rise('.tt',t,.3); pop('.say',t,1,.4)
+  set('.dz',{rotate:(t*120)+'deg'})
+  set('.hillF',{translate:'0 '+Math.sin(t*3)*8+'px'})
+}</script>
 </body></html>

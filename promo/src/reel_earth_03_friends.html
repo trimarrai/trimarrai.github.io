@@ -23,4 +23,15 @@
 <script src="sparkle.js"></script>
 <script>sparkles([[960,460,56,'#FFD43B'],[60,470,50,'#FFF'],[930,880,44,'#FFF'],[60,1150,50,'#FFD43B']],
  [[300,500,8,'#FFF'],[1000,700,8,'#FFF'],[500,1250,7,'#FFF']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){
+  pop('.ep',t,0,.3); rise('.tt',t,0)
+  var fr=$('.fr')
+  var a=E.back(E.p(t,.2,.8)); fr[0].style.translate=(-500*(1-a))+'px '+Math.sin(t*3)*10+'px'
+  var b=E.back(E.p(t,.5,1.1)); fr[1].style.scale=String(Math.max(0,b)); fr[1].style.rotate=(12+360*(1-E.out(E.p(t,.5,1.1))))+'deg'
+  var c=E.out(E.p(t,.8,1.4)); fr[2].style.translate='0 '+(400*(1-c)+Math.sin(t*3+1)*14)+'px'; fr[2].style.opacity=c
+  var ch=$('.chip'); [ .9,1.2,1.5].forEach(function(s,i){var x=E.p(t,s,s+.4); ch[i].style.opacity=x>0?1:0; ch[i].style.scale=String(E.back(x))})
+  pop('.hi',t,1.4,.4); set('.heart',{opacity:E.p(t,1.8,2),scale:String(1+.15*Math.sin(t*8))})
+  set('.hillF',{translate:'0 '+(Math.sin(t*3)*10)+'px'})
+}</script>
 </body></html>

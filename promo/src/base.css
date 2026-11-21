@@ -9,7 +9,7 @@
 @font-face{font-family:L;font-weight:900;src:url(fonts/noto-sans-kr-latin-900-normal.woff2)}
 :root{--sky:#CEF0FF;--lav:#D6E1FF;--hill:#C0C0F8;--ink:#3B2E8C;--accent:#7C6CE0;--octo:#BF77FF;--text:#4a4f66;--mute:#5a6070}
 *{box-sizing:border-box;margin:0}
-body{background:#888;font-family:L,K,sans-serif;color:var(--ink);word-break:keep-all}
+body{background:#888;overflow:hidden;font-family:L,K,sans-serif;color:var(--ink);word-break:keep-all}
 .ch{font-size:30px;letter-spacing:.22em;font-weight:800;color:var(--accent)}
 .h{font-size:76px;line-height:1.32;font-weight:900;color:var(--ink);letter-spacing:-.02em}
 .p{font-size:38px;line-height:1.6;font-weight:400;color:var(--text)}

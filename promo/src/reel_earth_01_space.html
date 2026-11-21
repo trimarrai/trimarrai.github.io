@@ -34,4 +34,12 @@
 <script src="sparkle.js"></script>
 <script>sparkles([[70,480,56,'#FFE066'],[960,420,64,'#FFF'],[80,1100,50,'#FFF'],[930,1120,50,'#FFE066'],[860,1400,40,'#FFF']],
  [[300,520,7,'#FFF'],[520,560,8,'#FFF'],[1010,1000,8,'#FFF'],[40,800,8,'#FFF'],[600,1450,7,'#FFE066'],[180,1450,8,'#FFF']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){
+  pop('.ep',t,0,.35); pop('.tt',t,.1,.5)
+  var m=E.out(E.p(t,0,2.4)), z=E.p(t,2.6,3.4)
+  set('.met',{translate:(-520+520*m+260*z*z)+'px '+(-620+620*m+300*z*z)+'px',scale:String(1-.5*z)})
+  set('.planet,.ring',{translate:'0 '+Math.sin(t*2)*10+'px'})
+  pop('.pname',t,.6); set('.earth,.land,.chip:not(.pname)',{translate:'0 '+(1-E.out(E.p(t,0,.8)))*200+'px'})
+}</script>
 </body></html>

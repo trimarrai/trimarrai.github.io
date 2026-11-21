@@ -249,8 +249,13 @@ function statsTab() {
     [won(sumField('love')), '연애 타로'],
     [won(sumField('pray')), '기도'],
     [won(sumField('signup')), '신규 가입'],
-  ])) + dailyNote()
+  ])) +
+  // 앱 라이브 업데이트 결과 (최근 7일): 단계별 횟수와 앱에서 실행 중인 화면 버전
+  card('앱 업데이트 <small>최근 7일</small>',
+    sub('결과') + barList(sumPrefix('upd_', 7).filter(([k]) => !k.startsWith('run_')), (k) => UPD[k] || k) +
+    sub('실행 중인 화면 버전') + barList(sumPrefix('upd_run_', 7), (k) => k.replace(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})_/, '$2/$3 $4:$5 · '))) + dailyNote()
 }
+const UPD = { latest: '최신 버전', dl: '새 버전 받음', set: '새 버전 적용', old_build: '빌드가 낮아 건너뜀', err_rolled_back: '적용 실패 → 되돌림', err_load: '업데이트 기능 로드 실패' }
 
 // ---------- 최근 탭: 방문 기록 ----------
 function recentTab() {
@@ -521,7 +526,8 @@ function demo() {
     const d = { v_app: Math.round(all * 0.6), v_web: all - Math.round(all * 0.6), h: all + r(10, 60), signup: r(1, 12), tarot: r(60, 160), love: r(10, 40), pray: r(20, 60),
       ch_app: r(80, 140), ch_direct: r(30, 70), ch_search: r(5, 25), ch_sns: r(2, 12), src_search_Google: r(4, 15), src_search_Naver: r(1, 8), src_sns_Instagram: r(1, 8),
       c_KR: r(120, 200), c_JP: r(5, 20), c_US: r(2, 12), l_ko: r(120, 200), l_ja: r(5, 20), l_en: r(3, 15), dv_app: r(80, 140), dv_phone: r(40, 90), dv_pc: r(5, 20),
-      p_home: r(120, 200), p_chambre: r(10, 40), p_love: r(5, 20), p_shop: r(5, 20) }
+      p_home: r(120, 200), p_chambre: r(10, 40), p_love: r(5, 20), p_shop: r(5, 20),
+      upd_latest: r(20, 60), upd_dl: r(0, 5), upd_set: r(0, 5), upd_err_rolled_back: r(0, 1), upd_run_202611202018_f84f84a: r(10, 40), upd_run_202611180950_0206a98: r(0, 10) }
     data.daily[dayKey(addDays(new Date(), -i))] = d
   }
   data.dailyOk = true

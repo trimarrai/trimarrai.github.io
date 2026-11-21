@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css"><link rel="stylesheet" href="earth.css">
+<style>
+/* 3–6초: 쿵! 언덕에 불시착 */
+.boom{position:absolute;left:100px;top:560px;width:440px;height:440px;rotate:-10deg}
+.boom b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:120px;font-weight:900;color:var(--ink)}
+.puff{position:absolute;border-radius:50%;background:#FFF}
+.dz{position:absolute;left:700px;top:880px;width:300px;height:90px;border-radius:50%;border:8px dashed #FFE066}
+.say{position:absolute;left:600px;top:700px;padding:20px 34px;background:#FFF;border-radius:36px;font-size:44px;font-weight:900;color:var(--ink)}
+.say::after{content:"";position:absolute;left:80px;bottom:-34px;border-left:20px solid transparent;border-right:20px solid transparent;border-top:36px solid #FFF}
+</style></head><body>
+<div class="f" id="frame">
+  <span class="ep">릴멜의 지구 적응기 #1</span>
+  <p class="tt">그리고… 지구에<br><span class="mk">불시착</span>했어요</p>
+  <svg class="boom" viewBox="0 0 100 100"><path d="M50 0L60 30 92 14 74 42 100 54 70 62 82 94 54 74 40 100 34 70 4 82 24 56 0 40 30 34 18 6 44 26Z" fill="#FFE066"/></svg>
+  <div class="boom" style="pointer-events:none"><b>쿵!</b></div>
+  <div class="say">어지러워…</div>
+  <div class="dz"></div>
+  <div class="puff" style="left:60px;top:1320px;width:150px;height:150px"></div>
+  <div class="puff" style="left:170px;top:1380px;width:110px;height:110px"></div>
+  <div class="puff" style="left:900px;top:1350px;width:130px;height:130px"></div>
+  <img class="hillF" src="hill.png" alt="">
+</div>
+<script src="sparkle.js"></script>
+<script>sparkles([[690,860,60,'#FFD43B'],[930,830,50,'#FFD43B'],[820,980,44,'#FFF'],[70,180,46,'#FFF'],[960,190,40,'#FFD43B']],
+ [[300,520,8,'#FFF'],[1000,600,8,'#FFF'],[620,1100,7,'#FFF']])</script>
+</body></html>

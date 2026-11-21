@@ -1,0 +1,7 @@
+/* 릴스 '지구 적응기' 공용 */
+.tt{position:absolute;top:230px;left:0;right:0;text-align:center;font-size:70px;line-height:1.38;font-weight:900;color:var(--ink)}
+.night .tt{color:#FFF}.night .tt .mk{color:var(--ink)}
+.ep{position:absolute;top:120px;left:50%;translate:-50% 0;padding:10px 30px;background:#FFF;border-radius:999px;font-size:32px;font-weight:800;color:var(--ink)}
+.night .ep{background:#4A3FA0;color:#FFF}
+.hillF{position:absolute;left:0;bottom:0;width:1080px}
+.chip{position:absolute;padding:8px 26px;background:#FFF;border-radius:999px;font-size:34px;font-weight:800;color:var(--ink);white-space:nowrap}

@@ -2,10 +2,13 @@
 <html lang="ko"><head><meta charset="utf-8">
 <link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css"><link rel="stylesheet" href="earth.css"><link rel="stylesheet" href="story.css"><link rel="stylesheet" href="love.css">
 <style>.stk{position:absolute;padding:14px 30px;background:#FFE066;border-radius:999px;font-size:42px;font-weight:900;color:var(--ink);z-index:4}
-.f.dark{background:#2E2770}.dark .lv .t{color:#FFF}.dark .lv .n{background:#FFE066;color:var(--ink)}.dark .heart{color:#F06292}</style></head><body>
+.f.dark{background:#2E2770}.dark .lv .t{color:#FFF}.dark .lv .n{background:#FFE066;color:var(--ink)}.dark .heart{color:#F06292}.pre{position:absolute;top:1380px;left:0;right:0;text-align:center;font-size:84px;font-weight:900;color:#FFF}
+</style></head><body>
 <div class="f pink  dark" id="frame">
   <span class="ep">솔로 연애운 최고의 카드 TOP 3</span>
- <div class="big card" style="top:290px;width:580px;--r:-3deg"><img class="tcard" src="cards/tr13@2x.jpg" alt="죽음 카드"></div>
+<div class="big bkc" style="top:290px;width:580px;--r:-3deg"><div class="bk" style="background:#4A3FA0"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div></div>
+  <p class="pre">1위는…</p>
+  <div class="big card" style="top:290px;width:580px;--r:-3deg"><img class="tcard" src="cards/tr13@2x.jpg" alt="죽음 카드"></div>
   <div class="rank" style="left:110px;top:230px"><b>1</b><small>위</small></div>
   <div class="lv" style="top:1330px"><span class="n">XIII</span><span class="t">죽음</span></div>
   <div class="mean" style="top:1490px">솔로라면 <span class="mk">최고의 카드</span>예요<br>왜냐하면…</div><span class="stk" style="left:620px;top:240px;rotate:8deg;background:#F06292;color:#FFF">죽음 카드?! 😱</span>
@@ -15,6 +18,11 @@
 <script src="sparkle.js"></script>
 <script>sparkles([[60,1000,50,'#FFF'],[970,980,56,'#FFD43B']],[[300,330,8,'#FFF'],[1010,700,8,'#FFF']])</script>
 <script src="anim.js"></script>
-<script>function ANIM(t){set('.pq',{translate:'0 '+Math.sin(t*3)*12+'px'}); $('.heart').forEach(function(el,i){el.style.scale=String(1+.15*Math.sin(t*6+i*2))});var f=E.out(E.p(t,0,.35)); set('.card',{scale:f+' 1'}); pop('.rank',t,.3,.4); pop('.lv',t,.5,.4); pop('.ep',t,0,.3);
-  var e=type('.mean',t,.9,10); pop('.stk',t,e+.2,.4); $('.stk').forEach(function(el){el.style.rotate=(8+Math.sin(t*8)*5)+'deg'});var k=Math.max(0,1-Math.abs(t-.45)/.3); set('.card',{translate:(Math.sin(t*80)*14*k)+'px 0'});}</script>
+<script>function ANIM(t){set('.pq',{translate:'0 '+Math.sin(t*3)*12+'px'}); $('.heart').forEach(function(el,i){el.style.scale=String(1+.15*Math.sin(t*6+i*2))});
+  pop('.ep',t,0,.3); var D=1.2;
+  var sh=E.p(t,.2,1)*(1-E.p(t,1,1.05)); set('.bkc',{scale:(1-E.p(t,D-.2,D))+' 1',translate:(Math.sin(t*60)*12*sh)+'px 0'});
+  set('.pre',{opacity:E.p(t,.1,.4)*(1-E.p(t,D-.2,D))});
+  var f=E.out(E.p(t,D,D+.3)); set('.card',{scale:f+' 1'}); pop('.rank',t,D+.3,.4); pop('.lv',t,D+.5,.4);
+  var e=type('.mean',t,D+.9,10); pop('.stk',t,e+.2,.4); $('.stk').forEach(function(el){el.style.rotate=(8+Math.sin(t*8)*5)+'deg'});
+}</script>
 </body></html>

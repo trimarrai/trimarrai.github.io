@@ -37,10 +37,11 @@ var LFADE = .45   // 한 줄이 나타나는 데 걸리는 시간
 function type(sel, t, a, cps) {
   cps = cps || 10; var end = a
   $(sel).forEach(function (el) {
-    prepType(el); el.style.opacity = 1
+    prepType(el)
     var st = [], acc = a
     el._len.forEach(function (n, i) { st[i] = acc; acc += Math.max(.6, n / cps) })
     var al = function (l) { return E.out(E.p(t, st[l], st[l] + LFADE)) }
+    el.style.opacity = al(0)
     el._chars.forEach(function (s) { s.style.opacity = al(s._l) })
     el._marks.forEach(function (mc) {
       var c = el._chars.filter(function (s) { return mc[0].contains(s) })[0], f = c ? al(c._l) : 1

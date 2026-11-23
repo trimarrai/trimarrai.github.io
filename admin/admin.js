@@ -93,14 +93,24 @@ async function loadData() {
   if (buys) data.purchases = buys.docs.map((d) => ({ ...d.data(), at: d.data().at?.toDate?.() || null })).filter((p) => p.at)
   if (coupons) data.coupons = coupons.docs.map((d) => ({ code: d.id, ...d.data() })).sort((x, y) => x.code.localeCompare(y.code))
   data.total = total ? total.data().count : null
+  await loadHitUsers(data.hits)
 }
 const hitOf = (d) => ({ ...d.data(), at: d.data().at?.toDate?.() || null })
+// 로그인한 방문에는 uid 가 붙습니다. 그 계정의 이메일을 보여 주려고 users 문서를 한 번씩만 읽습니다
+async function loadHitUsers(hits) {
+  if (DEMO) return
+  const { db, F } = fb
+  const uids = [...new Set(hits.map((h) => h.uid).filter((u) => u && !data.users[u]))]
+  await Promise.all(uids.map((u) => F.getDoc(F.doc(db, 'users', u)).then((d) => { if (d.exists()) userOf(d) }).catch(() => {})))
+}
 
 async function moreHits() {
   if (DEMO) { data.hitsEnd = true; return }
   const { db, F } = fb
   const snap = await F.getDocs(F.query(F.collection(db, 'hits'), F.orderBy('at', 'desc'), F.startAfter(data.hitsLast), F.limit(30)))
-  data.hits.push(...snap.docs.map(hitOf))
+  const more = snap.docs.map(hitOf)
+  await loadHitUsers(more)
+  data.hits.push(...more)
   data.hitsLast = snap.docs[snap.docs.length - 1] || data.hitsLast
   data.hitsEnd = snap.docs.length < 30
 }
@@ -258,9 +268,15 @@ function statsTab() {
 const UPD = { latest: '최신 버전', dl: '새 버전 받음', set: '새 버전 적용 (다음에 열 때)', set_now: '새 버전 바로 적용', old_build: '빌드가 낮아 건너뜀', err_rolled_back: '적용 실패 → 되돌림', err_load: '업데이트 기능 로드 실패' }
 
 // ---------- 최근 탭: 방문 기록 ----------
+// 로그인한 방문이면 Gmail 계정을 보여 주고, 누르면 사용자 탭에서 그 계정을 엽니다
+function hitWho(h) {
+  if (!h.uid) return ''
+  const u = data.users[h.uid]
+  return u?.email ? `<p class="who" data-pick="${esc(h.uid)}">${esc(u.email)}</p>` : '<p class="who dim2">로그인 사용자 (계정 정보 없음)</p>'
+}
 function recentTab() {
   return card('최근 방문', `${data.hits.map((h) => `<div class="hit"><div class="top"><span>${h.at ? when(h.at) : '-'}</span><span>${num(h.views) || 1}화면</span></div>
-<p class="ch">${esc((CH[h.ch] || h.ch) + (h.src ? ' · ' + h.src : ''))}</p><p class="lp">첫 화면 ${esc(pageName(h.landing))}</p>
+<p class="ch">${esc((CH[h.ch] || h.ch) + (h.src ? ' · ' + h.src : ''))}</p>${hitWho(h)}<p class="lp">첫 화면 ${esc(pageName(h.landing))}</p>
 <p class="env">${esc([h.country || '?', h.lang, DEVICE[h.device], h.os, h.browser === 'app' ? '앱' : h.browser, h.first ? '첫 방문' : '다시 방문'].filter(Boolean).join(' · '))}</p></div>`).join('') || '<p class="dim">아직 기록이 없습니다.</p>'}
 ${data.hitsEnd ? '' : '<button type="button" class="btn ghost full" data-act="moreHits">더 보기</button>'}
 ${data.hitsOk ? '' : '<p class="dim">방문 기록을 읽지 못했습니다. firestore.rules 를 최신으로 게시했는지 확인해 주세요.</p>'}`)
@@ -552,7 +568,7 @@ function demo() {
   for (let i = 0; i < 30; i++) {
     const ch = pick(['app', 'app', 'direct', 'search', 'sns'])
     data.hits.push({ at: new Date(now - i * r(5, 40) * 60000), ch, src: ch === 'search' ? 'Google' : ch === 'sns' ? 'Instagram' : '', landing: pick(['home', 'home', 'chambre', 'love']),
-      country: 'KR', lang: 'ko-KR', device: 'phone', os: ch === 'app' ? 'Android' : pick(['Android', 'iOS']), browser: ch === 'app' ? 'app' : 'Chrome', first: i % 3 === 0, views: r(1, 9) })
+      uid: i % 5 < 3 ? 'demo' + (i % 12) : '', country: 'KR', lang: 'ko-KR', device: 'phone', os: ch === 'app' ? 'Android' : pick(['Android', 'iOS']), browser: ch === 'app' ? 'app' : 'Chrome', first: i % 3 === 0, views: r(1, 9) })
   }
   data.hitsOk = true
   data.coupons = [{ code: 'WELCOME2026', crystals: 3, stones: 0, uses: 41, maxUses: 100, active: true }, { code: 'LEELMELL1117', crystals: 3, stones: 0, uses: 100, maxUses: 100, active: false }]

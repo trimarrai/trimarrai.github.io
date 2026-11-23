@@ -21,7 +21,7 @@
 <script src="sparkle.js"></script>
 <script>sparkles([[60,1000,50,'#FFF'],[970,980,56,'#FFD43B']],[[300,330,8,'#FFF'],[1010,700,8,'#FFF']])</script>
 <script src="anim.js"></script>
-<script>function ANIM(t){set('.pq',{translate:'0 '+Math.sin(t*3)*12+'px'}); $('.heart').forEach(function(el,i){el.style.scale=String(1+.15*Math.sin(t*6+i*2))});pop('.ep',t,0,.3); var e=type('.tt',t,.2,3.5); var e2=type('.hk',t,e+.2,3.5);
+<script>function ANIM(t){set('.pq',{translate:'0 '+Math.sin(t*3)*12+'px'}); $('.heart').forEach(function(el,i){el.style.scale=String(1+.15*Math.sin(t*6+i*2))});pop('.ep',t,0,.3); var e=type('.tt',t,.2,9); var e2=type('.hk',t,e+.2,9);
   pop('.fan3 .l',t,e2+.1,.35); pop('.fan3 .c',t,e2+.3,.35); pop('.fan3 .r',t,e2+.5,.35);
   set('.fan3 .r',{rotate:(7+Math.sin(t*14)*4*E.p(t,e2+.9,e2+1.1))+'deg'}); rise('.pq,.qq',t,.3,.5);}</script>
 </body></html>

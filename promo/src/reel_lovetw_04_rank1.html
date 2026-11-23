@@ -16,5 +16,5 @@
 <script>sparkles([[60,1000,50,'#FFF'],[970,980,56,'#FFD43B']],[[300,330,8,'#FFF'],[1010,700,8,'#FFF']])</script>
 <script src="anim.js"></script>
 <script>function ANIM(t){set('.pq',{translate:'0 '+Math.sin(t*3)*12+'px'}); $('.heart').forEach(function(el,i){el.style.scale=String(1+.15*Math.sin(t*6+i*2))});var f=E.out(E.p(t,0,.35)); set('.card',{scale:f+' 1'}); pop('.rank',t,.3,.4); pop('.lv',t,.5,.4); pop('.ep',t,0,.3);
-  var e=type('.mean',t,.9,12); pop('.stk',t,e+.2,.4); $('.stk').forEach(function(el){el.style.rotate=(8+Math.sin(t*8)*5)+'deg'});var k=Math.max(0,1-Math.abs(t-.45)/.3); set('.card',{translate:(Math.sin(t*80)*14*k)+'px 0'});}</script>
+  var e=type('.mean',t,.9,3.5); pop('.stk',t,e+.2,.4); $('.stk').forEach(function(el){el.style.rotate=(8+Math.sin(t*8)*5)+'deg'});var k=Math.max(0,1-Math.abs(t-.45)/.3); set('.card',{translate:(Math.sin(t*80)*14*k)+'px 0'});}</script>
 </body></html>

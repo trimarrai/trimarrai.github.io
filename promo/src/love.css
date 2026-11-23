@@ -1,0 +1,14 @@
+/* 릴스 '연애운 좋은 카드 TOP 3' · 분홍 플랫 */
+.f.pink{background:#CEF0FF}
+.pink .ep{background:#FFF}
+.pink .mound{background:#FFC2D9}
+.pq{position:absolute;width:360px}
+.qq{position:absolute;padding:6px 22px;border-radius:999px;background:#F06292;color:#FFF;font-size:34px;font-weight:900}
+.rank{position:absolute;width:170px;height:170px;border-radius:50%;background:#FFE066;color:var(--ink);text-align:center;z-index:3;line-height:1}
+.rank b{display:block;margin-top:34px;font-size:78px;font-weight:900}.rank small{font-size:30px;font-weight:800}
+.lv{position:absolute;left:0;right:0;text-align:center}
+.lv .n{display:inline-block;vertical-align:middle;padding:8px 24px;background:var(--ink);border-radius:999px;font-size:32px;font-weight:800;letter-spacing:.12em;color:#FFF}
+.lv .t{display:inline-block;vertical-align:middle;margin-left:18px;font-size:96px;font-weight:900;color:var(--ink)}
+.mean{position:absolute;left:80px;right:80px;padding:34px 40px;background:#FFF;border-radius:44px;text-align:center;font-size:46px;line-height:1.5;font-weight:800;color:var(--ink)}
+.mean .mk{background:#FFC2D9}
+.heart{position:absolute;color:#F06292;font-weight:900}

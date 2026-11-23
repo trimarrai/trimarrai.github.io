@@ -1,0 +1,12 @@
+{
+  "name": "릴멜 관리자",
+  "short_name": "릴멜 관리자",
+  "start_url": "/admin/",
+  "scope": "/admin/",
+  "display": "browser",
+  "background_color": "#D6E1FF",
+  "theme_color": "#D6E1FF",
+  "icons": [
+    { "src": "/images/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" }
+  ]
+}

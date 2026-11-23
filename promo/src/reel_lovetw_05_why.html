@@ -25,9 +25,9 @@
 <script src="sparkle.js"></script>
 <script>sparkles([[60,1000,50,'#FFF'],[970,980,56,'#FFD43B']],[[300,330,8,'#FFF'],[1010,700,8,'#FFF']])</script>
 <script src="anim.js"></script>
-<script>function ANIM(t){set('.pq',{translate:'0 '+Math.sin(t*3)*12+'px'}); $('.heart').forEach(function(el,i){el.style.scale=String(1+.15*Math.sin(t*6+i*2))});pop('.ep',t,0,.3); var e=type('.big2',t,.1,9);
+<script>function ANIM(t){set('.pq',{translate:'0 '+Math.sin(t*3)*12+'px'}); $('.heart').forEach(function(el,i){el.style.scale=String(1+.15*Math.sin(t*6+i*2))});pop('.ep',t,0,.3); var e=type('.big2',t,.1,10);
   var sp=$('.steps>span'),em=$('.steps>em'),a=e+.3;
   sp.forEach(function(s,i){var x=E.p(t,a,a+.3); s.querySelector('i').style.scale=String(Math.max(0,E.back(x))); s.style.opacity=1;
-    var b=s.querySelector('b'); b.id='sb'+i; a=type('#sb'+i,t,a+.3,9)+.25; if(em[i])em[i].style.opacity=E.p(t,a-.2,a)});
+    var b=s.querySelector('b'); b.id='sb'+i; a=type('#sb'+i,t,a+.3,10)+.25; if(em[i])em[i].style.opacity=E.p(t,a-.2,a)});
   rise('.mini',t,a,.5);}</script>
 </body></html>

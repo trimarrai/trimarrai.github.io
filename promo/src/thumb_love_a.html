@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css"><link rel="stylesheet" href="love.css">
+<style>
+/* 썸네일 A: 죽음 카드 크게 + 충격 문구 · 프로필 격자(가운데 3:4)에 핵심이 들어가게 */
+.f{background:#2E2770}
+.tag{position:absolute;top:300px;left:50%;translate:-50% 0;padding:12px 34px;background:#F06292;border-radius:999px;font-size:40px;font-weight:900;color:#FFF;white-space:nowrap}
+.h{position:absolute;top:400px;left:0;right:0;text-align:center;font-size:96px;line-height:1.25;font-weight:900;color:#FFF;letter-spacing:-.02em}
+.h .mk{color:var(--ink)}
+.card{position:absolute;left:50%;top:740px;width:520px;margin-left:-260px;rotate:4deg}
+.card .tcard{border-radius:26px}
+.rank{left:170px;top:700px}
+.wow{position:absolute;left:650px;top:710px;padding:14px 30px;background:#FFE066;border-radius:999px;font-size:52px;font-weight:900;color:var(--ink);rotate:10deg;z-index:4}
+.heart{position:absolute;color:#F06292;font-weight:900}
+</style></head><body>
+<div class="f" id="frame">
+  <span class="tag">솔로 연애운 TOP 3</span>
+  <p class="h">1위가<br><span class="mk">죽음 카드</span>?!</p>
+  <div class="card"><img class="tcard" src="cards/tr13@2x.jpg" alt="죽음 카드"></div>
+  <div class="rank"><b>1</b><small>위</small></div>
+  <span class="wow">반전 😱</span>
+  <span class="heart" style="left:90px;top:1200px;font-size:80px">♥</span>
+  <span class="heart" style="left:900px;top:1350px;font-size:60px">♥</span>
+</div>
+<script src="sparkle.js"></script>
+<script>sparkles([[80,520,60,'#FFE066'],[940,470,70,'#FFF'],[930,1050,50,'#FFE066'],[70,950,56,'#FFF']],[[250,260,8,'#FFF'],[860,250,8,'#FFF'],[1000,800,8,'#FFF'],[60,1500,8,'#FFF']])</script>
+</body></html>

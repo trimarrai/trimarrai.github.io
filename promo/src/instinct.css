@@ -1,0 +1,8 @@
+/* 릴멜 본능타로 시리즈 공용 · 남색 밤하늘 플랫 */
+.f.nt{background:#2E2770}
+.nt .tt{color:#FFF}.nt .tt .mk{color:var(--ink)}
+.series{position:absolute;top:150px;left:50%;translate:-50% 0;padding:12px 34px;background:#FFE066;border-radius:999px;font-size:38px;font-weight:900;color:var(--ink);white-space:nowrap}
+.nt .mound{background:#4A3FA0}
+.topic{position:absolute;left:50%;translate:-50% 0;padding:10px 30px;background:#FFF;border-radius:999px;font-size:40px;font-weight:900;color:var(--ink);white-space:nowrap}
+.nt .lv .t{color:#FFF}.nt .lv .n{background:#FFE066;color:var(--ink)}
+.msg2{position:absolute;left:80px;right:80px;padding:34px 40px;background:#FFF;border-radius:44px;text-align:center;font-size:54px;line-height:1.45;font-weight:900;color:var(--ink)}

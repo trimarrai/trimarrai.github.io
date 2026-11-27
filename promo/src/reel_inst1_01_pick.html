@@ -17,4 +17,8 @@
 </div>
 <script src="sparkle.js"></script>
 <script>sparkles([[70,520,56,'#FFE066'],[950,500,64,'#FFF'],[60,1300,50,'#FFF'],[960,1320,50,'#FFE066']],[[160,600,8,'#FFF'],[920,640,8,'#FFF'],[1010,900,8,'#FFF'],[50,950,8,'#FFF']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){pop('.series',t,0,.3); set('.fan3 .l,.fan3 .c,.fan3 .r',{}); pop('.fan3 .l',t,0,.35); pop('.fan3 .c',t,.1,.35); pop('.fan3 .r',t,.2,.35);
+  ['.fan3 .l','.fan3 .c','.fan3 .r'].forEach(function(q,i){$(q)[0].style.translate='0 '+(Math.sin(t*3+i*1.4)*10)+'px'});
+  var e=type('.why',t,.2,10); type('.tt',t,e,10);}</script>
 </body></html>

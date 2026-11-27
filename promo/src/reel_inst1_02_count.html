@@ -17,4 +17,7 @@
 </div>
 <script src="sparkle.js"></script>
 <script>sparkles([[70,520,56,'#FFE066'],[950,500,64,'#FFF'],[60,1300,50,'#FFF'],[960,1320,50,'#FFE066']],[[160,600,8,'#FFF'],[920,640,8,'#FFF'],[1010,900,8,'#FFF'],[50,950,8,'#FFF']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){pop('.series',t,0,.2); type('.tt',t,0,10);
+  var k=Math.min(2,Math.floor(t)); var cd=$('.cd')[0]; cd.textContent=String(3-k); var x=E.p(t,k,k+.3); cd.style.scale=String(E.back(x));}</script>
 </body></html>

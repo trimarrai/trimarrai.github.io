@@ -6,7 +6,8 @@
 .mound{top:1800px}</style></head><body>
 <div class="f nt" id="frame">
   <span class="series">릴멜 본능타로 #1</span>
- <div class="big card" style="top:290px;width:560px;--r:-3deg"><img class="tcard" src="cards/tr20@2x.jpg" alt="심판 카드"></div>
+ <div class="big bkc" style="top:290px;width:560px;--r:-3deg"><div class="bk" style="background:#6D5AE3"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div></div>
+  <div class="big card" style="top:290px;width:560px;--r:-3deg"><img class="tcard" src="cards/tr20@2x.jpg" alt="심판 카드"></div>
   <div class="rank" style="left:120px;top:240px"><b>3</b><small>번</small></div>
   <span class="topic" style="top:1260px">📣 소식</span>
   <div class="lv" style="top:1345px"><span class="n">XX</span><span class="t">심판</span></div>
@@ -16,4 +17,7 @@
 </div>
 <script src="sparkle.js"></script>
 <script>sparkles([[70,520,56,'#FFE066'],[950,500,64,'#FFF'],[60,1300,50,'#FFF'],[960,1320,50,'#FFE066']],[[160,600,8,'#FFF'],[920,640,8,'#FFF'],[1010,900,8,'#FFF'],[50,950,8,'#FFF']])</script>
+<script src="anim.js"></script>
+<script>function ANIM(t){pop('.series',t,0,.2); var D=.5; set('.bkc',{scale:(1-E.p(t,D-.25,D))+' 1'}); set('.card',{scale:E.out(E.p(t,D,D+.3))+' 1'});
+  pop('.rank',t,D+.3,.4); pop('.topic',t,D+.5,.35); pop('.lv',t,D+.7,.35); type('.msg2',t,D+1,10);}</script>
 </body></html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css"><link rel="stylesheet" href="earth.css"><link rel="stylesheet" href="love.css"><link rel="stylesheet" href="instinct.css">
+<style>
+.series{background:#FFF}
+.snow{position:absolute;border-radius:50%;background:#FFF;opacity:.85}
+.box{position:absolute;left:80px;right:80px;padding:34px 40px;background:#FFF;border-radius:44px;text-align:center;font-size:54px;line-height:1.45;font-weight:900;color:var(--ink)}
+.tt{top:270px}
+.li{position:absolute;left:90px;right:90px;display:flex;align-items:center;gap:30px;padding:30px 36px;background:#FFF;border-radius:40px}
+.li i{flex:none;width:130px;height:130px;border-radius:50%;background:#E8ECFF;font-style:normal;font-size:76px;line-height:130px;text-align:center}
+.li b{font-size:50px;line-height:1.35;font-weight:900;color:var(--ink)}.li small{display:block;font-size:34px;font-weight:700;color:var(--mute)}</style></head><body>
+<div class="f nt" id="frame">
+  <span class="series">올해가 가기 전에 🎄</span>
+ <p class="tt">죽음 카드는 <span class="mk">끝내야 할 것</span>이<br>있다는 신호예요</p>
+  <div class="li" style="top:640px"><i>💔</i><b>마음에 남은 관계<small>이미 끝났는데 놓지 못한 사람</small></b></div>
+  <div class="li" style="top:900px"><i>📦</i><b>미뤄 둔 일<small>올해 하겠다고 한 그 일</small></b></div>
+  <div class="li" style="top:1160px"><i>😮‍💨</i><b>나를 지치게 하는 습관<small>알면서도 계속하는 것</small></b></div>
+  <div class="mound" style="background:#E8ECFF"></div>
+</div>
+<script>
+// 눈송이 (단색 점)
+(function(){var f=document.getElementById('frame'),h='',s=[[40,620,10],[1020,600,9],[50,1100,8],[1010,1180,10],[120,1640,7],[940,1620,9],[60,880,6],[1020,900,7],[300,1700,6],[780,1720,8]];
+s.forEach(function(p){h+='<span class="snow" style="left:'+p[0]+'px;top:'+p[1]+'px;width:'+p[2]*2+'px;height:'+p[2]*2+'px"></span>'});f.insertAdjacentHTML('afterbegin',h)})()
+</script>
+</body></html>

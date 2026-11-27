@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css"><link rel="stylesheet" href="earth.css"><link rel="stylesheet" href="love.css"><link rel="stylesheet" href="instinct.css">
+<style>
+.series{background:#FFF}
+.snow{position:absolute;border-radius:50%;background:#FFF;opacity:.85}
+.box{position:absolute;left:80px;right:80px;padding:34px 40px;background:#FFF;border-radius:44px;text-align:center;font-size:54px;line-height:1.45;font-weight:900;color:var(--ink)}
+.cal{position:absolute;left:50%;width:520px;margin-left:-260px;background:#FFF;border-radius:40px;overflow:hidden;rotate:-4deg}
+.ct{background:#F06292;color:#FFF;text-align:center;font-size:40px;font-weight:900;padding:14px 0}
+.cn{text-align:center;font-size:200px;line-height:1;font-weight:900;color:var(--ink);margin-top:20px}
+.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;padding:24px 34px 36px}
+.cg i{display:block;aspect-ratio:1;border-radius:10px;background:#E8ECFF}
+.cg i.e{background:#F06292}.tt{top:270px}.cal{top:640px}
+.warn{position:absolute;top:1430px;left:0;right:0;text-align:center;font-size:52px;font-weight:900;color:#FFE066}</style></head><body>
+<div class="f nt" id="frame">
+  <span class="series">올해가 가기 전에 🎄</span>
+ <p class="tt">이걸 안 끝내고 새해 맞으면<br><span class="mk">2027년에도 반복</span>돼요</p>
+  <div class="cal"><div class="ct">2026</div><div class="cn">12</div><div class="cg"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="e"></i></div></div>
+  <p class="warn">올해가 가기 전에 꼭 확인하세요 ⏳</p>
+  <div class="mound" style="background:#E8ECFF"></div>
+</div>
+<script>
+// 눈송이 (단색 점)
+(function(){var f=document.getElementById('frame'),h='',s=[[40,620,10],[1020,600,9],[50,1100,8],[1010,1180,10],[120,1640,7],[940,1620,9],[60,880,6],[1020,900,7],[300,1700,6],[780,1720,8]];
+s.forEach(function(p){h+='<span class="snow" style="left:'+p[0]+'px;top:'+p[1]+'px;width:'+p[2]*2+'px;height:'+p[2]*2+'px"></span>'});f.insertAdjacentHTML('afterbegin',h)})()
+</script>
+</body></html>

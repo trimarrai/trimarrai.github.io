@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css"><link rel="stylesheet" href="earth.css"><link rel="stylesheet" href="love.css"><link rel="stylesheet" href="instinct.css">
+<style>
+.series{background:#FFF}
+.snow{position:absolute;border-radius:50%;background:#FFF;opacity:.85}
+.box{position:absolute;left:80px;right:80px;padding:34px 40px;background:#FFF;border-radius:44px;text-align:center;font-size:54px;line-height:1.45;font-weight:900;color:var(--ink)}
+.tt{top:270px}.card{top:520px;width:560px;--r:-3deg}
+.lv{top:1530px}</style></head><body>
+<div class="f nt" id="frame">
+  <span class="series">올해가 가기 전에 🎄</span>
+ <p class="tt">올해 꼭 정리해야 할 것,<br>카드가 말해 줘요</p>
+  <div class="big card"><img class="tcard" src="cards/tr13@2x.jpg" alt="죽음 카드"></div>
+  <div class="lv"><span class="n">XIII</span><span class="t">죽음</span></div>
+  <div class="mound" style="background:#E8ECFF"></div>
+</div>
+<script>
+// 눈송이 (단색 점)
+(function(){var f=document.getElementById('frame'),h='',s=[[40,620,10],[1020,600,9],[50,1100,8],[1010,1180,10],[120,1640,7],[940,1620,9],[60,880,6],[1020,900,7],[300,1700,6],[780,1720,8]];
+s.forEach(function(p){h+='<span class="snow" style="left:'+p[0]+'px;top:'+p[1]+'px;width:'+p[2]*2+'px;height:'+p[2]*2+'px"></span>'});f.insertAdjacentHTML('afterbegin',h)})()
+</script>
+</body></html>

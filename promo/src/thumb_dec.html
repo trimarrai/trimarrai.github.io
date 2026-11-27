@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css"><link rel="stylesheet" href="earth.css"><link rel="stylesheet" href="love.css"><link rel="stylesheet" href="instinct.css">
+<style>
+.series{background:#FFF;top:300px;font-size:44px;padding:14px 40px}
+.snow{position:absolute;border-radius:50%;background:#FFF;opacity:.85}
+.cal{position:absolute;left:50%;width:520px;margin-left:-260px;background:#FFF;border-radius:40px;overflow:hidden;rotate:-4deg}
+.ct{background:#F06292;color:#FFF;text-align:center;font-size:40px;font-weight:900;padding:14px 0}
+.cn{text-align:center;font-size:200px;line-height:1;font-weight:900;color:var(--ink);margin-top:20px}
+.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;padding:24px 34px 36px}
+.cg i{display:block;aspect-ratio:1;border-radius:10px;background:#E8ECFF}
+.cg i.e{background:#F06292}
+.cg i.b{background:none}
+.h{position:absolute;top:400px;left:0;right:0;text-align:center;font-size:96px;line-height:1.25;font-weight:900;color:#FFF;letter-spacing:-.02em}
+.h .mk{color:var(--ink)}
+.cal{top:780px;left:370px;width:440px;rotate:-8deg}
+.cn{font-size:170px}
+.dc{position:absolute;left:590px;top:760px;width:380px;rotate:8deg}
+.dc .tcard{border-radius:22px}
+.warn{position:absolute;top:1450px;left:0;right:0;text-align:center;font-size:54px;font-weight:900;color:#FFE066}
+</style></head><body>
+<div class="f nt" id="frame">
+  <span class="series">올해가 가기 전에 🎄</span>
+  <p class="h">12월 안에<br><span class="mk">꼭 끝내야 할 것</span></p>
+  <div class="cal"><div class="ct">2026</div><div class="cn">12</div><div class="cg"><i class="b"></i><i class="b"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="e"></i></div></div>
+  <div class="dc"><img class="tcard" src="cards/tr13@2x.jpg" alt="죽음 카드"></div>
+  <p class="warn">안 하면 2027년에도 반복돼요 ⏳</p>
+  <div class="mound" style="background:#E8ECFF"></div>
+</div>
+<script>
+(function(){var f=document.getElementById('frame'),h='',s=[[60,620,10],[1010,600,9],[50,1150,8],[1010,1250,10],[120,1640,7],[940,1620,9],[200,260,6],[880,250,7]];
+s.forEach(function(p){h+='<span class="snow" style="left:'+p[0]+'px;top:'+p[1]+'px;width:'+p[2]*2+'px;height:'+p[2]*2+'px"></span>'});f.insertAdjacentHTML('afterbegin',h)})()
+</script>
+</body></html>

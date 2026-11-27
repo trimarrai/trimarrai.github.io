@@ -5,11 +5,12 @@
 .series{background:#FFF}
 .snow{position:absolute;border-radius:50%;background:#FFF;opacity:.85}
 .box{position:absolute;left:80px;right:80px;padding:34px 40px;background:#FFF;border-radius:44px;text-align:center;font-size:54px;line-height:1.45;font-weight:900;color:var(--ink)}
-.tt{top:270px}.card{top:520px;width:560px;--r:-3deg}
+.tt{top:270px}.card,.bkc{top:520px;width:560px;--r:-3deg}
 .lv{top:1530px}</style></head><body>
 <div class="f nt" id="frame">
   <span class="series">올해가 가기 전에 🎄</span>
  <p class="tt">올해 꼭 정리해야 할 것,<br>카드가 말해 줘요</p>
+  <div class="big bkc"><div class="bk" style="background:#6D5AE3"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div></div>
   <div class="big card"><img class="tcard" src="cards/tr13@2x.jpg" alt="죽음 카드"></div>
   <div class="lv"><span class="n">XIII</span><span class="t">죽음</span></div>
   <div class="mound" style="background:#E8ECFF"></div>
@@ -19,4 +20,6 @@
 (function(){var f=document.getElementById('frame'),h='',s=[[40,620,10],[1020,600,9],[50,1100,8],[1010,1180,10],[120,1640,7],[940,1620,9],[60,880,6],[1020,900,7],[300,1700,6],[780,1720,8]];
 s.forEach(function(p){h+='<span class="snow" style="left:'+p[0]+'px;top:'+p[1]+'px;width:'+p[2]*2+'px;height:'+p[2]*2+'px"></span>'});f.insertAdjacentHTML('afterbegin',h)})()
 </script>
+<script src="anim.js"></script>
+<script>function ANIM(t){$('.snow').forEach(function(el,i){el.style.translate=(Math.sin(t*1.5+i)*12)+'px '+((t*40+i*37)%120-60)+'px'}); pop('.series',t,0,.3);var e=type('.tt',t,.1,10); var D=e+.2; set('.bkc',{opacity:E.p(t,.1,.3),scale:(1-E.p(t,D-.25,D))+' 1'}); set('.card',{scale:E.out(E.p(t,D,D+.3))+' 1'}); pop('.lv',t,D+.4,.4);}</script>
 </body></html>

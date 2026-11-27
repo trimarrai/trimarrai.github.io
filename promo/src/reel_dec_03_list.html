@@ -22,4 +22,6 @@
 (function(){var f=document.getElementById('frame'),h='',s=[[40,620,10],[1020,600,9],[50,1100,8],[1010,1180,10],[120,1640,7],[940,1620,9],[60,880,6],[1020,900,7],[300,1700,6],[780,1720,8]];
 s.forEach(function(p){h+='<span class="snow" style="left:'+p[0]+'px;top:'+p[1]+'px;width:'+p[2]*2+'px;height:'+p[2]*2+'px"></span>'});f.insertAdjacentHTML('afterbegin',h)})()
 </script>
+<script src="anim.js"></script>
+<script>function ANIM(t){$('.snow').forEach(function(el,i){el.style.translate=(Math.sin(t*1.5+i)*12)+'px '+((t*40+i*37)%120-60)+'px'}); pop('.series',t,0,.3);var e=type('.tt',t,.1,10); $('.li').forEach(function(el,i){var x=E.out(E.p(t,e+.1+i*1.1,e+.5+i*1.1)); el.style.opacity=x; el.style.translate=((1-x)*120)+'px 0'});}</script>
 </body></html>

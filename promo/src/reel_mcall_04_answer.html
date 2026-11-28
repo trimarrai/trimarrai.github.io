@@ -40,4 +40,6 @@
 <div class="cd" style="top:290px;width:390px;left:400px;margin-left:0"><img class="tcard" src="cards/tr17@2x.jpg" alt="Star(별)" style="border:0;border-radius:24px;background:none"></div>
 
 <div class="ans" style="top:1100px"><span class="mk">이번 주 안에 연락이 와요</span><small>Star(별) 카드는 긴 기다림 끝에<br>희망이 찾아오는 카드예요.<br>멈춰 있던 마음이 조금씩 이어지기 시작해요.</small></div>
-</div></body></html>
+</div><script src="anim.js"></script>
+<script>function ANIM(t){pop('.bd',t,0,.3); $('img[src*="mm01"]').forEach(function(el){el.style.translate='0 '+Math.sin(t*3.2)*12+'px'});rise('.cd',t,0,.4); set('.mini2',{opacity:.45*E.p(t,.3,.6)}); type('.ans',t,.6,10);}</script>
+</body></html>

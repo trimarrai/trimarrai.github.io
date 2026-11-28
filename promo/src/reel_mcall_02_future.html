@@ -28,4 +28,6 @@
 <span class="bd">💌 이번 주 연락운</span><div class="sunw"></div>
 <p class="t" style="top:300px">이번 주 <span class="mk">미래 한 장만</span> 볼게요</p>
 <div class="row" style="top:720px"><span><div class="bk" style="background:#FF8A65"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div><b>과거</b></span><span><div class="bk" style="background:#FF8A65"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div><b>현재</b></span><span class="on"><div class="bk" style="background:#FF7AB6"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div><b>미래</b></span></div><div class="bed" style="top:1560px"></div><div class="pillow" style="top:1480px;left:280px"></div><div class="blanket" style="top:1700px"></div><img src="../../images/mm01.png" style="position:absolute;left:310px;top:1380px;width:460px;z-index:2">
-</div></body></html>
+</div><script src="anim.js"></script>
+<script>function ANIM(t){pop('.bd',t,0,.3); $('img[src*="mm01"]').forEach(function(el){el.style.translate='0 '+Math.sin(t*3.2)*12+'px'});var e=type('.t',t,.1,10); set('.row',{opacity:E.p(t,.1,.4)}); var x=E.back(E.p(t,e,e+.5)); $('.row .on')[0].style.scale=String(1+.15*x); $('.row .on')[0].style.rotate=(Math.sin(t*14)*3*E.p(t,e+.5,e+.7))+'deg';}</script>
+</body></html>

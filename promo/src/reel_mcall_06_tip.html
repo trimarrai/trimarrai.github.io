@@ -31,4 +31,6 @@
 <div class="f" id="frame">
 <span class="bd">💌 이번 주 연락운</span><div class="sunw"></div>
 <div class="mini"><img class="tcard" src="cards/tr17@2x.jpg" alt="Star(별)" style="border:0;border-radius:24px;background:none"></div><div class="bub"><span class="who">릴멜의 한마디</span><p class="line">연락이 오면<br><span class="mk">반갑게, 가볍게</span> 받아 주세요<small>지난 이야기는 천천히 해도 늦지 않아요</small></p></div><div class="bed" style="top:1560px"></div><div class="pillow" style="top:1480px;left:280px"></div><div class="blanket" style="top:1700px"></div><img src="../../images/mm01.png" style="position:absolute;left:310px;top:1380px;width:460px;z-index:2">
-</div></body></html>
+</div><script src="anim.js"></script>
+<script>function ANIM(t){pop('.bd',t,0,.3); $('img[src*="mm01"]').forEach(function(el){el.style.translate='0 '+Math.sin(t*3.2)*12+'px'});rise('.mini',t,0,.4); pop('.bub',t,.3,.45); type('.bub .line',t,.7,10);}</script>
+</body></html>

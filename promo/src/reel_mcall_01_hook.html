@@ -32,4 +32,6 @@
 <div class="ph2"><div class="sc"><div class="tm">7:29</div><div class="em">새 알림 없음</div></div></div>
 <div class="th">💭 연락 올까…?</div>
 <div class="bed" style="top:1560px"></div><div class="pillow" style="top:1480px;left:280px"></div><div class="blanket" style="top:1700px"></div><img src="../../images/mm01.png" style="position:absolute;left:310px;top:1380px;width:460px;z-index:2">
-</div></body></html>
+</div><script src="anim.js"></script>
+<script>function ANIM(t){pop('.bd',t,0,.3); $('img[src*="mm01"]').forEach(function(el){el.style.translate='0 '+Math.sin(t*3.2)*12+'px'});var e=type('.t',t,.1,10); pop('.ph2',t,.2,.45); set('.ph2',{rotate:(-5+Math.sin(t*2)*1.5)+'deg'}); pop('.th',t,e+.2,.4);}</script>
+</body></html>

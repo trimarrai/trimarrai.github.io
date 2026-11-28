@@ -32,4 +32,6 @@
 <div class="phone bigp"><div class="sc"><div class="tm">7:30</div><div class="nt">💬 그 사람<br>좋은 아침 ☀️</div><div class="rp">답장하기 💌</div></div></div>
 <p class="ln" style="top:1190px">휴대폰 화면에 <span class="mk">그 사람 이름이 뜨는 순간</span>,<br>심장이 먼저 알아챌 거예요 💓</p>
 <p class="ln" style="top:1420px">"좋은 아침" 한마디지만<br><span class="mk">그 사람도 몇 번이나 썼다 지웠어요</span></p>
-</div></body></html>
+</div><script src="anim.js"></script>
+<script>function ANIM(t){pop('.bd',t,0,.3); $('img[src*="mm01"]').forEach(function(el){el.style.translate='0 '+Math.sin(t*3.2)*12+'px'});pop('.phone',t,.1,.45); var k=E.p(t,.6,.7)*(1-E.p(t,1.1,1.2)); set('.phone',{translate:(Math.sin(t*70)*10*k)+'px 0'}); set('.phone .nt',{opacity:E.p(t,.6,.8),scale:String(E.back(E.p(t,.6,1)))}); var l=$('.ln'); l[0].id='l1'; l[1].id='l2'; var e=type('#l1',t,1.2,10); type('#l2',t,e+.3,10);}</script>
+</body></html>

@@ -44,4 +44,6 @@
 <p class="hint">한마디만 남겨 주세요</p></div>
 <p class="cta" style="top:1020px"><span style="background:#FF7AB6;color:#FFF">복채는 ❤️ 두 번 톡톡</span></p>
 <p class="cta" style="top:1140px"><span style="background:#3B2E8C;color:#FFF">내 과거 · 현재 · 미래 <b style="color:#FFE066">👉 프로필 링크</b></span></p><div class="bed" style="top:1560px"></div><div class="pillow" style="top:1480px;left:280px"></div><div class="blanket" style="top:1700px"></div><img src="../../images/mm01.png" style="position:absolute;left:310px;top:1380px;width:460px;z-index:2">
-</div></body></html>
+</div><script src="anim.js"></script>
+<script>function ANIM(t){pop('.bd',t,0,.3); $('img[src*="mm01"]').forEach(function(el){el.style.translate='0 '+Math.sin(t*3.2)*12+'px'});var e=type('.t',t,.1,10); pop('.sheet',t,e,.4); set('.inp i',{opacity:Math.floor(t*2.5)%2}); pop('.cta',t,e+.6,.4); $('.cta')[0].style.scale=String(1+.05*Math.max(0,Math.sin((t-e-1.2)*6))*(t>e+1.2));}</script>
+</body></html>

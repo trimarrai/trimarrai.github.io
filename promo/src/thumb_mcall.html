@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css">
+<style>.f{position:relative;width:1080px;height:1920px;overflow:hidden}
+.bd{position:absolute;top:150px;left:50%;translate:-50% 0;padding:12px 34px;border-radius:999px;font-size:38px;font-weight:900;white-space:nowrap;z-index:5}
+.t{position:absolute;top:250px;left:0;right:0;text-align:center;font-size:72px;line-height:1.38;font-weight:900;z-index:5}
+.row{position:absolute;left:0;right:0;display:flex;justify-content:center;gap:34px;z-index:4}
+.row span{position:relative;width:260px}
+.row b{position:absolute;left:50%;bottom:-40px;translate:-50% 0;padding:6px 26px;border-radius:999px;background:#FFF;font-size:34px;font-weight:900;color:var(--ink)}
+.row .on{translate:0 -40px}
+.cd{position:absolute;left:50%;width:540px;margin-left:-270px;rotate:-3deg;z-index:4}
+.ans{position:absolute;left:80px;right:80px;padding:36px;background:#FFF;border-radius:44px;text-align:center;font-size:54px;line-height:1.45;font-weight:900;color:var(--ink);z-index:5}
+.ans small{display:block;font-size:38px;color:var(--mute);font-weight:700}
+.oc{position:absolute;left:50%;width:480px;margin-left:-240px;z-index:4}
+.f{background:#FFE5D6}
+.bd{background:#FF8A65;color:#FFF}.t{color:#5D4037}
+.bed{position:absolute;left:-100px;right:-100px;top:1300px;height:900px;background:#FFFFFF;border-radius:80px}
+.blanket{position:absolute;left:-100px;right:-100px;top:1480px;height:800px;background:#FFCCBC;border-radius:80px}
+.pillow{position:absolute;left:120px;top:1200px;width:520px;height:220px;background:#FFF;border-radius:110px;border:10px solid #FFE0D2}
+.phone{position:absolute;left:640px;top:1080px;width:300px;height:520px;background:#3B2E8C;border-radius:44px;padding:20px;rotate:8deg;z-index:3}
+.phone .sc{width:100%;height:100%;background:#FFF6E0;border-radius:30px;padding:30px 18px}
+.phone .tm{text-align:center;font-size:64px;font-weight:900;color:#3B2E8C}
+.phone .nt{margin-top:30px;background:#FFF;border-radius:22px;padding:16px;font-size:26px;font-weight:800;color:#3B2E8C;box-shadow:none;border:3px solid #FFD0BE}
+.sunw{position:absolute;left:760px;top:460px;width:200px;height:200px;border-radius:50%;background:#FFD54F}
+.sunw{left:930px;top:90px;width:130px;height:130px}
+.cm{position:absolute;top:640px;left:90px;right:90px;padding:40px;background:#FFF;border-radius:44px;text-align:center;font-size:58px;font-weight:900;color:#5D4037}
+.bok{position:absolute;top:900px;left:50%;translate:-50% 0;padding:20px 44px;background:#FF7AB6;border-radius:999px;font-size:50px;font-weight:900;color:#FFF;white-space:nowrap}
+.m3{position:absolute;top:960px;left:0;right:0;display:flex;justify-content:center;gap:22px}.m3 span{width:190px}.m3 span:not(:last-child){opacity:.45}
+.go{position:absolute;left:0;right:0;top:1080px;text-align:center;z-index:6}
+.go span{display:inline-block;padding:20px 40px;background:#3B2E8C;border-radius:999px;font-size:42px;font-weight:900;color:#FFF}.go b{color:#FFE066}.cta{position:absolute;left:0;right:0;text-align:center;z-index:5}.cta span{display:inline-block;padding:18px 40px;border-radius:999px;font-size:42px;font-weight:900}
+.sheet{position:absolute;left:60px;right:60px;top:560px;background:#FFF;border-radius:48px;padding:40px 44px;z-index:4}
+.sheet h4{margin:0 0 26px;text-align:center;font-size:40px;color:#5D4037}
+.cmt{display:flex;align-items:center;gap:22px;margin-top:22px}
+.av{flex:none;width:90px;height:90px;border-radius:50%;background:#FFE3EE;font-size:50px;line-height:90px;text-align:center}
+.inp{flex:1;padding:22px 30px;border-radius:999px;border:4px solid #FF7AB6;font-size:44px;font-weight:800;color:#5D4037}
+.inp i{display:inline-block;width:4px;height:44px;background:#FF7AB6;vertical-align:-6px;margin-left:4px}
+.snd{flex:none;font-size:40px;font-weight:900;color:#FF7AB6}
+.hint{margin-top:26px;text-align:center;font-size:34px;color:#8a6a5e;font-weight:700}.cv{position:absolute;left:180px;top:690px;width:380px;rotate:-7deg;z-index:3}
+.ph{position:absolute;left:560px;top:660px;width:380px;height:680px;background:#3B2E8C;border-radius:56px;padding:24px;rotate:7deg;z-index:4}
+.ph .sc{width:100%;height:100%;background:#FFF6E0;border-radius:36px;padding:50px 24px}
+.ph .tm{text-align:center;font-size:96px;font-weight:900;color:#3B2E8C}
+.ph .nt{margin-top:40px;background:#FFF;border:4px solid #FFD0BE;border-radius:28px;padding:24px;font-size:40px;font-weight:900;color:#3B2E8C}
+.sub{position:absolute;left:0;right:0;top:1420px;text-align:center;font-size:54px;font-weight:900;color:#5D4037}
+</style></head><body>
+<div class="f" id="frame">
+<span class="bd" style="top:290px;font-size:44px;padding:14px 40px">💌 이번 주 연락운</span><div class="sunw"></div>
+<p class="t" style="top:390px;font-size:96px;line-height:1.25">그 사람에게서<br><span class="mk">연락 올까?</span></p>
+<div class="cv"><img class="tcard" src="cards/tr17@2x.jpg" alt="Star(별)" style="border:0;border-radius:22px;background:none"></div>
+<div class="ph"><div class="sc"><div class="tm">7:30</div><div class="nt">💬 그 사람<br>좋은 아침 ☀️</div></div></div>
+<p class="sub">미래 카드가 답해 줬어요 ✨</p>
+<div class="bed" style="top:1720px"></div><div class="pillow" style="top:1660px;left:280px"></div><div class="blanket" style="top:1840px"></div><img src="../../images/mm01.png" style="position:absolute;left:330px;top:1540px;width:420px;z-index:2">
+</div></body></html>

@@ -15,4 +15,7 @@ ffmpeg -y -loglevel error $I -i $T/audio.wav \
  -filter_complex "${F}concat=n=$k:v=1,format=yuv420p[v]" -map "[v]" -map $k:a \
  -c:v libx264 -profile:v high -crf 18 -preset slow -r 30 -c:a aac -b:a 160k -shortest -movflags +faststart reels/mcall_reel.mp4
 for s in $S; do n=${s%%:*}; node tools/shot.js src/reel_mcall_$n.html reels/mcall/$n.png; done
-rm -rf $T; echo "reels/mcall_reel.mp4 완료"
+# 효과음만 있는 버전 (인스타 · 유튜브 음원을 따로 깔 때)
+NO_BGM=1 python3 tools/make_audio.py $T/sfx.wav $TOT "$EV"
+ffmpeg -y -loglevel error -i reels/mcall_reel.mp4 -i $T/sfx.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 160k -shortest -movflags +faststart reels/mcall_reel_sfx.mp4
+rm -rf $T; echo "reels/mcall_reel.mp4 · reels/mcall_reel_sfx.mp4 완료"

@@ -93,7 +93,9 @@ def sfx(kind):
 
 def main():
     out_path, total, events = sys.argv[1], float(sys.argv[2]), sys.argv[3]
-    mix = music_box(total)
+    import os
+    # NO_BGM=1 이면 배경음 없이 효과음만
+    mix = np.zeros(int(SR * total)) if os.environ.get('NO_BGM') else music_box(total)
     for ev in events.split(','):
         at, kind = ev.split(':')
         s = sfx(kind)

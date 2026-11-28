@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css">
+<style>.f{position:relative;width:1080px;height:1920px;overflow:hidden}
+.f{background:#1E1A4D}
+.bd{position:absolute;top:150px;left:50%;translate:-50% 0;padding:12px 34px;border:4px solid #FF7AB6;border-radius:999px;font-size:38px;font-weight:900;color:#FF7AB6;white-space:nowrap}
+.t{position:absolute;top:260px;left:0;right:0;text-align:center;font-size:72px;line-height:1.38;font-weight:900;color:#FFF}
+.t em{font-style:normal;color:#FF7AB6}
+.moon{position:absolute;left:760px;top:520px;width:200px;height:200px;border-radius:50%;background:#FFE066}.moon::after{content:"";position:absolute;left:60px;top:-20px;width:190px;height:190px;border-radius:50%;background:#1E1A4D}
+.row{position:absolute;top:760px;left:0;right:0;display:flex;justify-content:center;gap:34px}
+.row span{position:relative;width:270px}.row .bk{border-color:#FF7AB6;background:#2E2770}
+.row b{position:absolute;left:50%;bottom:-40px;translate:-50% 0;padding:6px 26px;border-radius:999px;background:#FFF;font-size:34px;font-weight:900;color:#1E1A4D}
+.row .on .bk{background:#FF7AB6;border-color:#FFF}.row .on{translate:0 -40px}
+.cd{position:absolute;left:50%;top:330px;width:560px;margin-left:-280px;rotate:-3deg;outline:8px solid #FF7AB6;outline-offset:10px;border-radius:30px}
+.ans{position:absolute;left:80px;right:80px;top:1400px;padding:36px;border:5px solid #FF7AB6;border-radius:44px;text-align:center;font-size:54px;line-height:1.45;font-weight:900;color:#FFF}
+.ans small{display:block;font-size:38px;color:#C9C3F2;font-weight:700}</style></head><body>
+<div class="f" id="frame">
+<span class="bd">이번 주 연락운</span>
+<p class="t">이 영상이 떴다면,<br><em>그 사람 생각 중</em>이었죠?</p>
+<div class="moon"></div>
+<div class="row"><span><div class="bk"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div><b>과거</b></span><span><div class="bk"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div><b>현재</b></span><span class="on"><div class="bk"><svg viewBox="0 0 10 10"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0z" fill="#FFE066"/></svg></div><b>미래</b></span></div>
+<img src="../../images/mm01.png" style="position:absolute;left:50%;top:1500px;width:520px;margin-left:-260px">
+</div>
+<script src="sparkle.js"></script><script>sparkles([[90,560,50,'#FFF'],[120,1300,40,'#FF7AB6'],[950,1250,56,'#FFF'],[200,200,40,'#FFE066']],[[300,700,6,'#FFF'],[880,450,6,'#FFF'],[60,900,6,'#FFF'],[1010,1000,6,'#FFF'],[540,1700,6,'#FFF']])</script>
+</body></html>

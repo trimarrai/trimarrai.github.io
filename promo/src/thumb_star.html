@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="flat.css">
+<style>
+/* 커버: 릴스 '별' 편 · 프로필 격자(가운데 3:4, y 240~1680)에 핵심이 들어가게 */
+.tag{position:absolute;top:300px;left:50%;translate:-50% 0;padding:14px 40px;background:#FFF;border-radius:999px;font-size:42px;font-weight:900;color:var(--ink);white-space:nowrap}
+.h{position:absolute;top:400px;left:0;right:0;text-align:center;font-size:96px;line-height:1.25;font-weight:900;color:var(--ink);letter-spacing:-.02em}
+.disc{position:absolute;left:50%;top:700px;width:760px;height:760px;margin-left:-380px;border-radius:50%;background:#FFF5C2}
+.plate{position:absolute;left:50%;top:720px;width:420px;height:720px;margin-left:-190px;border-radius:30px;background:var(--octo);rotate:6deg}
+.card{position:absolute;left:50%;top:700px;width:420px;margin-left:-230px;rotate:-4deg}
+.card .tcard{border:0;border-radius:24px;background:none}
+.sub{position:absolute;top:1480px;left:0;right:0;text-align:center;font-size:56px;font-weight:900;color:var(--ink)}
+.mound{top:1760px}.octo{top:1620px;width:440px;margin-left:-220px}
+</style></head><body>
+<div class="f" id="frame">
+  <span class="tag">릴멜이 고른 오늘의 카드</span>
+  <p class="h">지친 당신에게<br><span class="mk">온 카드</span>예요</p>
+  <div class="disc"></div><div class="plate"></div>
+  <div class="card"><img class="tcard" src="cards/tr17@2x.jpg" alt="별 카드"></div>
+  <p class="sub">XVII 별 · 다시 차오르는 희망 🌙</p>
+  <div class="mound"></div>
+  <img class="octo" src="../../images/mm01.png" alt="릴멜">
+</div>
+<script src="sparkle.js"></script>
+<script>sparkles([[80,620,64,'#FFD43B'],[930,600,70,'#FFF'],[90,1300,56,'#FFF'],[940,1320,56,'#FFD43B']],[[200,260,8,'#FFF'],[880,250,8,'#FFF']])</script>
+</body></html>
